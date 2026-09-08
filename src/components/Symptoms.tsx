@@ -66,7 +66,7 @@ export default function Symptoms({
   return (
     <section
       className={[
-        'w-full bg-[linear-gradient(-28deg,#F5F9FF_28%,#FFFFFF_100%)] pt-[100px] pb-20',
+        'w-full bg-[linear-gradient(-28deg,#F5F9FF_28%,#FFFFFF_100%)] pt-[100px] pb-0',
         className,
       ]
         .filter(Boolean)
@@ -99,14 +99,36 @@ export default function Symptoms({
                 <button
                   type="button"
                   aria-pressed={isSelected}
+                  data-active={isSelected || undefined}
                   onClick={() => toggleSymptom(symptom.id)}
                   className={[
-                    'flex h-[247px] w-full max-w-[199px] cursor-pointer flex-col items-center rounded-card border bg-white px-3 pt-8 transition-[border-color,box-shadow,background-color] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
+                    'relative flex h-[247px] w-full max-w-[199px] cursor-pointer flex-col items-center rounded-card border-2 bg-white px-3 pt-8 transition-[border-color,box-shadow,background-color,transform] duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary active:scale-[0.98]',
                     isSelected
-                      ? 'border-primary bg-primary-tint shadow-card'
-                      : 'border-border-primary hover:border-primary',
+                      ? 'border-primary bg-[#eef3ff] shadow-[0_8px_24px_rgba(31,79,191,0.18)]'
+                      : 'border-[rgba(31,79,191,0.53)] hover:border-primary hover:bg-primary-tint',
                   ].join(' ')}
                 >
+                  {isSelected ? (
+                    <span
+                      className="absolute top-3 right-3 flex size-6 items-center justify-center rounded-full bg-primary text-white"
+                      aria-hidden="true"
+                    >
+                      <svg
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        className="size-3.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.5 8.5 6.5 11.5 12.5 4.5"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  ) : null}
                   <span className="flex h-[110px] w-[100px] items-center justify-center overflow-hidden">
                     <img
                       src={symptom.icon}

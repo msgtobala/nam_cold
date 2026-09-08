@@ -1,4 +1,5 @@
 import HeroBanner from '@components/HeroBanner'
+import SolutionsGrid from '@components/SolutionsGrid'
 import Symptoms from '@components/Symptoms'
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <HeroBanner />
       <Symptoms />
+      <SolutionsGrid />
     </>
   )
 }
