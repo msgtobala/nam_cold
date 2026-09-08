@@ -1,0 +1,188 @@
+@import '@styles/fonts.css';
+@import 'tailwindcss';
+
+/*
+  Nam Cold design tokens from Figma Design POC
+  Pages: Home (1:6), Solutions (1:619), Products (1:1173), About (1:1816)
+*/
+
+@theme {
+  /* Brand / primary */
+  --color-primary: #1f4fbf;
+  --color-primary-dark: #112f76;
+  --color-primary-deep: #103385;
+  --color-primary-bright: #1646b8;
+  --color-secondary: #1a1a1a;
+
+  /* Ink / headings */
+  --color-ink: #10203e;
+  --color-ink-strong: #0d1a06;
+  --color-navy: #0d1a52;
+  --color-footer: #0c1829;
+  --color-footer-deep: #04112e;
+  --color-footer-from: #2b419e;
+  --color-footer-to: #0d1a52;
+  --gradient-footer: linear-gradient(180deg, #2b419e 0%, #0d1a52 96%);
+  --color-footer-muted: rgb(255 255 255 / 0.85);
+  --color-footer-subtle: rgb(255 255 255 / 0.6);
+  --color-footer-divider: rgb(255 255 255 / 0.2);
+
+  /* Text */
+  --color-body: #4b5563;
+  --color-muted: #65738e;
+  --color-muted-alt: #5a6272;
+  --color-subtle: #8aa0c8;
+  --color-placeholder: #6b6b6b;
+
+  /* Surfaces */
+  --color-background: #ffffff;
+  --color-surface: #f6f9fe;
+  --color-surface-soft: #f5f9ff;
+  --color-surface-warm: #f7f5f0;
+  --color-surface-cream: #fafaf7;
+  --color-surface-sand: #f0ede5;
+  --color-surface-sage: #edeed6;
+  --color-surface-mint: #f0f7eb;
+
+  /* Borders */
+  --color-border: #e5e7eb;
+  --color-border-warm: #e0ddd6;
+  --color-border-sand: #ccc9bf;
+  --color-border-primary: rgb(31 79 191 / 0.53);
+  --color-border-primary-soft: rgb(31 79 191 / 0.35);
+
+  /* Accents (product / marketing highlights) */
+  --color-accent-gold: #f3b11c;
+  --color-accent-amber: #f7b733;
+  --color-accent-green: #44b00e;
+  --color-accent-forest: #2f7a32;
+  --color-accent-olive: #739b0b;
+  --color-accent-leaf: #2d5016;
+  --color-accent-pink: #e92063;
+  --color-accent-rose: #bf1f4b;
+  --color-accent-purple: #41199f;
+  --color-accent-sky: #bad7f7;
+  --color-accent-teal: #004471;
+
+  /* Overlays */
+  --color-header: rgb(255 255 255 / 0.84);
+  --color-glass: rgb(22 22 22 / 0.04);
+  --color-overlay: rgb(12 24 41 / 0.93);
+  --color-primary-tint: rgb(31 79 191 / 0.04);
+  --color-primary-glow: rgb(31 79 191 / 0.2);
+
+  /* Typography — Poppins for all UI text */
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+  /* Type scale (common Figma sizes) */
+  --text-caption: 0.6875rem; /* 11px */
+  --text-caption--line-height: 1.4;
+  --text-nav: 0.75rem; /* 12px */
+  --text-nav--line-height: 1.4;
+  --text-label: 0.8125rem; /* 13px */
+  --text-label--line-height: 1.4;
+  --text-body-sm: 0.875rem; /* 14px */
+  --text-body-sm--line-height: 1.5;
+  --text-body: 1rem; /* 16px */
+  --text-body--line-height: 1.5;
+  --text-button: 0.9375rem; /* 15px */
+  --text-button--line-height: 1.4;
+  --text-card-title: 1.25rem; /* 20px */
+  --text-card-title--line-height: 1.3;
+  --text-section: 1.5rem; /* 24px */
+  --text-section--line-height: 1.3;
+  --text-lead: 1.75rem; /* 28px */
+  --text-lead--line-height: 1.3;
+  --text-heading: 2.5rem; /* 40px */
+  --text-heading--line-height: 1.2;
+  --text-display: 3rem; /* 48px */
+  --text-display--line-height: 1.2;
+  --text-hero: 5rem; /* 80px */
+  --text-hero--line-height: 1;
+
+  /* Layout — Figma artboard 1440
+     Header/sections: 72px gutters → 1296 content
+     Footer: 80px gutters → 1280 content */
+  --breakpoint-desktop: 90rem; /* 1440px */
+  --container-page: 90rem; /* 1440px */
+  --container-content: 81rem; /* 1296px */
+  --container-footer: 80rem; /* 1280px */
+  --spacing-page-x: 4.5rem; /* 72px */
+  --spacing-footer-x: 5rem; /* 80px */
+  --spacing-section-y: 5.5rem; /* 88px */
+  --spacing-header: 5rem; /* 80px */
+
+  /* Radii */
+  --radius-sm: 0.5rem; /* 8px */
+  --radius-md: 0.75rem; /* 12px */
+  --radius-card: 1.25rem; /* 20px */
+  --radius-button: 1.875rem; /* 30px */
+  --radius-pill: 3.25rem; /* 52px */
+  --radius-badge: 6.25rem; /* 100px */
+
+  /* Shadows */
+  --shadow-card: 0 16px 42px 0 rgb(21 59 122 / 0.09);
+  --shadow-button: 0 4px 6px 0 rgb(31 79 191 / 0.2);
+  --shadow-soft: 0 4px 4px 0 #d4d5c0;
+
+  /* Blur */
+  --blur-header: 31.55px;
+  --blur-glass: 7.5px;
+
+  /* Tracking */
+  --tracking-eyebrow: 0.12em;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    color: var(--color-body);
+    background-color: var(--color-background);
+  }
+
+  #root {
+    min-height: 100svh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    font-weight: 500;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font-family: inherit;
+  }
+
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+}
