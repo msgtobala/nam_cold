@@ -1,48 +1,9 @@
 import { useState } from 'react'
 import Button from '@components/Button'
 import Container from '@components/Container'
-import { symptomIcons } from '@resources/symptoms'
+import { symptomsConfig, type SymptomId } from '@configs/symptoms'
 
-const symptoms = [
-  {
-    id: 'common-cold',
-    title: 'Common Cold',
-    subtitle: 'Sardi / Jukham',
-    icon: symptomIcons.commonCold,
-  },
-  {
-    id: 'blocked-nose',
-    title: 'Blocked Nose',
-    subtitle: 'Band Naak',
-    icon: symptomIcons.blockedNose,
-  },
-  {
-    id: 'night-congestion',
-    title: 'Night Congestion',
-    subtitle: 'Raat ki band naak',
-    icon: symptomIcons.nightCongestion,
-  },
-  {
-    id: 'allergies',
-    title: 'Allergies',
-    subtitle: 'Allergic Symptoms',
-    icon: symptomIcons.allergies,
-  },
-  {
-    id: 'kids-care',
-    title: 'Kids Care',
-    subtitle: 'Bachhon ki dekhbhal',
-    icon: symptomIcons.kidsCare,
-  },
-  {
-    id: 'flu-symptoms',
-    title: 'Flu Symptoms',
-    subtitle: 'Bukhar aur body ache',
-    icon: symptomIcons.fluSymptoms,
-  },
-] as const
-
-export type SymptomId = (typeof symptoms)[number]['id']
+export type { SymptomId }
 
 export type SymptomsProps = {
   className?: string
@@ -54,6 +15,7 @@ export default function Symptoms({
   onFindSolution,
 }: SymptomsProps) {
   const [selected, setSelected] = useState<SymptomId[]>([])
+  const { badge, heading, description, cta, items } = symptomsConfig
 
   function toggleSymptom(id: SymptomId) {
     setSelected((current) =>
@@ -66,7 +28,7 @@ export default function Symptoms({
   return (
     <section
       className={[
-        'w-full bg-[linear-gradient(-28deg,#F5F9FF_28%,#FFFFFF_100%)] pt-[100px] pb-0',
+        'w-full bg-[linear-gradient(-28deg,#F5F9FF_28%,#FFFFFF_100%)] pt-[100px] pb-[100px]',
         className,
       ]
         .filter(Boolean)
@@ -76,22 +38,21 @@ export default function Symptoms({
       <Container className="flex flex-col items-center gap-11">
         <header className="flex w-full max-w-[800px] flex-col items-center gap-4 text-center">
           <span className="rounded-badge border border-border-primary-soft bg-primary-tint px-4 py-1.5 text-nav font-medium text-primary">
-            Interactive Diagnostics
+            {badge}
           </span>
           <h2
             id="symptoms-heading"
             className="text-heading font-normal leading-[1.04] text-ink"
           >
-            How are you feeling today?
+            {heading}
           </h2>
           <p className="max-w-[800px] text-base font-normal text-[#4b5563]">
-            Select your symptoms below to discover the target clinical NAM COLD
-            solution tailored for your recovery.
+            {description}
           </p>
         </header>
 
         <ul className="grid w-full grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6 lg:gap-5">
-          {symptoms.map((symptom) => {
+          {items.map((symptom) => {
             const isSelected = selected.includes(symptom.id)
 
             return (
@@ -158,7 +119,7 @@ export default function Symptoms({
           variant="primary"
           onClick={() => onFindSolution?.(selected)}
         >
-          Find My Solution
+          {cta}
         </Button>
       </Container>
     </section>

@@ -108,8 +108,8 @@
   --container-page: 90rem; /* 1440px */
   --container-content: 81rem; /* 1296px */
   --container-footer: 80rem; /* 1280px */
-  --spacing-page-x: 4.5rem; /* 72px */
-  --spacing-footer-x: 5rem; /* 80px */
+  --spacing-page-x: 3rem; /* 48px */
+  --spacing-footer-x: 3.5rem; /* 56px */
   --spacing-section-y: 5.5rem; /* 88px */
   --spacing-header: 5rem; /* 80px */
 

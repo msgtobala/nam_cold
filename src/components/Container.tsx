@@ -10,10 +10,10 @@ export type ContainerProps = {
 }
 
 const widthClasses: Record<ContainerWidth, string> = {
-  /** 1440 max + 72px gutters → 1296 content (header / page sections) */
-  page: 'max-w-page px-4 sm:px-8 lg:px-page-x',
-  /** 1440 max + 80px gutters → 1280 content (footer) */
-  footer: 'max-w-page px-4 sm:px-8 lg:px-footer-x',
+  /** 1440 max; tighter side gutters */
+  page: 'max-w-page px-3 sm:px-6 lg:px-page-x',
+  /** 1440 max; tighter footer gutters */
+  footer: 'max-w-page px-3 sm:px-6 lg:px-footer-x',
 }
 
 export default function Container({

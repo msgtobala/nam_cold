@@ -1,4 +1,5 @@
 import { heroBanner } from '@resources/hero'
+import { strings } from '@strings/strings'
 
 export type HeroBannerProps = {
   className?: string
@@ -8,14 +9,14 @@ export type HeroBannerProps = {
 /** Figma hero: 1440×785, full-bleed under the header */
 export default function HeroBanner({
   className = '',
-  alt = 'NAM COLD OXY — खुलके सांस लो',
+  alt = strings.hero.alt,
 }: HeroBannerProps) {
   return (
     <section
       className={['relative w-full overflow-hidden bg-[#7ec8e8]', className]
         .filter(Boolean)
         .join(' ')}
-      aria-label="Hero banner"
+      aria-label={strings.hero.ariaLabel}
     >
       <div className="relative w-full aspect-[1440/785]">
         <img

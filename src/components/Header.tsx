@@ -2,14 +2,9 @@ import { Link, NavLink } from 'react-router-dom'
 import Button from '@components/Button'
 import Container from '@components/Container'
 import SearchIcon from '@icons/SearchIcon'
+import { navigationConfig } from '@configs/navigation'
 import { namColdLogo } from '@resources/brand'
-
-const navItems = [
-  { to: '/solutions', label: 'Solutions' },
-  { to: '/products', label: 'Products' },
-  { to: '/about', label: 'About Us' },
-  { to: '/contact', label: 'Contact' },
-] as const
+import { strings } from '@strings/strings'
 
 export type HeaderProps = {
   onSearchClick?: () => void
@@ -32,10 +27,14 @@ export default function Header({
         .join(' ')}
     >
       <Container className="relative flex h-full items-center justify-between">
-        <Link to="/" className="relative z-10 shrink-0" aria-label="Nam Cold home">
+        <Link
+          to="/"
+          className="relative z-10 shrink-0"
+          aria-label={strings.brand.homeAriaLabel}
+        >
           <img
             src={namColdLogo}
-            alt="NAM COLD"
+            alt={strings.brand.name}
             width={108}
             height={52}
             className="h-[52px] w-[108px] object-contain"
@@ -44,9 +43,9 @@ export default function Header({
 
         <nav
           className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-[33px] md:flex"
-          aria-label="Main"
+          aria-label={strings.common.mainNavAriaLabel}
         >
-          {navItems.map(({ to, label }) => (
+          {navigationConfig.items.map(({ to, label }) => (
             <NavLink
               key={to}
               to={to}
@@ -65,7 +64,7 @@ export default function Header({
         <div className="relative z-10 flex items-center gap-5">
           <button
             type="button"
-            aria-label="Search"
+            aria-label={strings.common.searchAriaLabel}
             onClick={onSearchClick}
             className="inline-flex size-[18px] cursor-pointer items-center justify-center text-primary transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
@@ -73,7 +72,7 @@ export default function Header({
           </button>
 
           <Button variant="primary" size="sm" onClick={onCtaClick}>
-            Find Your Relief
+            {navigationConfig.cta}
           </Button>
         </div>
       </Container>

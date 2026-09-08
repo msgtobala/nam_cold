@@ -19,6 +19,8 @@ export default defineConfig({
       '@pages': path.resolve(srcDir, 'pages'),
       '@icons': path.resolve(srcDir, 'components/icons'),
       '@styles': path.resolve(srcDir, 'styles'),
+      '@strings': path.resolve(srcDir, 'strings'),
+      '@configs': path.resolve(srcDir, 'configs'),
     },
   },
 })

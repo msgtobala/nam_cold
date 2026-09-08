@@ -14,7 +14,11 @@
       "@components/*": ["./src/components/*"],
       "@pages/*": ["./src/pages/*"],
       "@icons/*": ["./src/components/icons/*"],
-      "@styles/*": ["./src/styles/*"]
+      "@styles/*": ["./src/styles/*"],
+      "@strings": ["./src/strings/index.ts"],
+      "@strings/*": ["./src/strings/*"],
+      "@configs": ["./src/configs/index.ts"],
+      "@configs/*": ["./src/configs/*"]
     },
 
     /* Bundler mode */
