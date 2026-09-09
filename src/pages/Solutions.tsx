@@ -1,16 +1,29 @@
-import Container from '@components/Container'
+import AllergyRelief from '@components/AllergyRelief'
+import BlockedNose from '@components/BlockedNose'
+import CommonColdRelief from '@components/CommonColdRelief'
 import HeroBanner from '@components/HeroBanner'
+import KidsCare from '@components/KidsCare'
+import KnowledgeHub from '@components/KnowledgeHub'
+import Manifesto from '@components/Manifesto'
+import NightCongestion from '@components/NightCongestion'
+import ReliefIntro from '@components/ReliefIntro'
+import ReliefScience from '@components/ReliefScience'
+import TrustedEverywhere from '@components/TrustedEverywhere'
 
 export default function Solutions() {
   return (
     <>
       <HeroBanner />
-      <Container className="py-8">
-        <section className="page">
-          <h1>Solutions</h1>
-          <p>Placeholder for Nam Cold solutions and offerings.</p>
-        </section>
-      </Container>
+      <Manifesto />
+      <ReliefIntro />
+      <CommonColdRelief />
+      <BlockedNose />
+      <NightCongestion />
+      <AllergyRelief />
+      <KidsCare />
+      <ReliefScience />
+      <KnowledgeHub />
+      <TrustedEverywhere />
     </>
   )
 }

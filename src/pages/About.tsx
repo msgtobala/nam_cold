@@ -1,12 +1,9 @@
-import Container from '@components/Container'
+import AboutHeader from '@components/AboutHeader'
 
 export default function About() {
   return (
-    <Container className="py-8">
-      <section className="page">
-        <h1>About</h1>
-        <p>Placeholder about page for Nam Cold.</p>
-      </section>
-    </Container>
+    <>
+      <AboutHeader />
+    </>
   )
 }
