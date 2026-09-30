@@ -1,4 +1,5 @@
 import { productsHeroConfig } from '@configs/productsHero'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type ProductsHeroProps = {
   className?: string
@@ -10,13 +11,15 @@ export default function ProductsHero({ className = '' }: ProductsHeroProps) {
 
   return (
     <section
+      data-reveal="load"
       className={['relative w-full overflow-hidden bg-white', className]
         .filter(Boolean)
         .join(' ')}
       aria-label={ariaLabel}
     >
       <div className="relative w-full lg:aspect-[1442/844]">
-        <img
+        <ProgressiveImage
+          data-reveal-media
           src={banner.src}
           alt={banner.alt}
           width={banner.width}
@@ -31,7 +34,8 @@ export default function ProductsHero({ className = '' }: ProductsHeroProps) {
           aria-hidden="true"
         >
           <div className="absolute top-[-2.844%] left-[-2.843%] h-[102.844%] w-[102.843%] overflow-hidden">
-            <img
+            <ProgressiveImage
+              data-reveal-media
               src={banner.src}
               alt=""
               width={banner.width}
@@ -42,14 +46,19 @@ export default function ProductsHero({ className = '' }: ProductsHeroProps) {
           </div>
         </div>
 
-        <div className="relative flex w-full max-w-[540px] flex-col items-start gap-6 px-4 py-10 sm:gap-7 sm:px-8 sm:py-12 lg:absolute lg:top-[22.986%] lg:left-[5.548%] lg:w-[37.448%] lg:max-w-none lg:gap-7 lg:p-0">
+        <div data-reveal-item className="relative flex w-full max-w-[540px] flex-col items-start gap-6 px-4 py-10 sm:gap-7 sm:px-8 sm:py-12 lg:absolute lg:top-[22.986%] lg:left-[5.548%] lg:w-[37.448%] lg:max-w-none lg:gap-7 lg:p-0">
           <span className="rounded-full bg-primary px-3.5 py-[7px] text-caption font-semibold tracking-[1.1px] text-white">
             {badge}
           </span>
 
-          <h1 className="text-[1.75rem] font-normal leading-[1.04] tracking-[-0.03em] text-ink sm:text-4xl lg:text-display lg:tracking-[-1.44px]">
-            {heading}
+          <h1 className="text-[1.75rem] font-normal leading-[1.04] tracking-[-0.03em] text-ink sm:text-4xl lg:text-[6rem] lg:tracking-[-1.44px]">
+            {heading.split('\n').map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
           </h1>
+     
 
           <div className="flex items-center gap-6">
             {stats.map((stat, index) => (

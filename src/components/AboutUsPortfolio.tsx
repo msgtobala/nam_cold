@@ -1,4 +1,5 @@
 import { aboutUsPortfolioConfig } from '@configs/aboutUsPortfolio'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type AboutUsPortfolioProps = {
   className?: string
@@ -16,13 +17,14 @@ export default function AboutUsPortfolio({
 
   return (
     <section
+      data-reveal
       className={['w-full bg-surface-warm', className]
         .filter(Boolean)
         .join(' ')}
       aria-labelledby="about-us-portfolio-heading"
     >
       <div className="mx-auto flex w-full max-w-page flex-col items-start gap-10 px-4 py-14 sm:gap-12 sm:px-8 sm:py-16 lg:gap-16 lg:px-page-x lg:py-[96px]">
-        <header className="flex w-full flex-col items-start justify-between gap-6 lg:flex-row">
+        <header data-reveal-item className="flex w-full flex-col items-start justify-between gap-6 lg:flex-row">
           <div className="flex w-full shrink-0 flex-col items-start gap-1.5 lg:w-[140px]">
             <p className="text-caption font-semibold leading-[13px] tracking-[1.54px] text-accent-leaf">
               {index}
@@ -45,7 +47,7 @@ export default function AboutUsPortfolio({
         </header>
 
         <div className="relative h-[240px] w-full overflow-hidden rounded-[16px] sm:h-[320px] lg:h-[480px]">
-          <img
+          <ProgressiveImage
             src={image.src}
             alt={image.alt}
             width={image.width}
@@ -58,7 +60,7 @@ export default function AboutUsPortfolio({
 
         <ul className="flex w-full flex-col gap-2 lg:flex-row">
           {items.map((item) => (
-            <li
+            <li data-reveal-item
               key={item.id}
               className="flex min-w-0 flex-1 flex-col items-start gap-2.5 rounded-[12px] border border-solid border-[rgb(31_79_191_/_0.2)] bg-white p-6"
             >

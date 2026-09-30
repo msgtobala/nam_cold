@@ -12,11 +12,12 @@ export default function Faq({ className = '' }: FaqProps) {
 
   return (
     <section
+      data-reveal
       className={['w-full bg-[#f5f8fd]', className].filter(Boolean).join(' ')}
       aria-labelledby="faq-heading"
     >
       <div className="mx-auto flex w-full max-w-page flex-col gap-10 px-4 py-16 sm:px-8 sm:py-20 lg:px-20 lg:py-24">
-        <header className="flex w-full max-w-[600px] flex-col gap-3">
+        <header data-reveal-item className="flex w-full max-w-[600px] flex-col gap-3">
           <span className="text-body-sm font-medium tracking-[1.4px] text-primary-bright">
             {eyebrow}
           </span>

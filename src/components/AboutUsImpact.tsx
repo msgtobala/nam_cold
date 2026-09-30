@@ -1,4 +1,5 @@
 import { aboutUsImpactConfig } from '@configs/aboutUsImpact'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type AboutUsImpactProps = {
   className?: string
@@ -15,11 +16,12 @@ export default function AboutUsImpact({ className = '' }: AboutUsImpactProps) {
 
   return (
     <section
+      data-reveal
       className={['w-full bg-white', className].filter(Boolean).join(' ')}
       aria-labelledby="about-us-impact-heading"
     >
       <div className="mx-auto flex w-full max-w-page flex-col items-start gap-10 px-4 py-14 sm:gap-12 sm:px-8 sm:py-16 lg:gap-16 lg:px-page-x lg:pb-[56px] lg:pt-[96px]">
-        <header className="flex w-full flex-col items-center gap-5 overflow-hidden text-center">
+        <header data-reveal-item className="flex w-full flex-col items-center gap-5 overflow-hidden text-center">
           <p className="text-body-sm font-medium uppercase leading-normal tracking-[1.96px] text-primary">
             {eyebrow}
           </p>
@@ -33,7 +35,7 @@ export default function AboutUsImpact({ className = '' }: AboutUsImpactProps) {
 
         <ul className="flex w-full flex-col gap-2 lg:flex-row">
           {stats.map((stat) => (
-            <li
+            <li data-reveal-item
               key={stat.id}
               className={[
                 'flex min-w-0 flex-1 flex-col items-start gap-4 rounded-[16px] p-8 sm:p-12 lg:h-[280px]',
@@ -64,7 +66,7 @@ export default function AboutUsImpact({ className = '' }: AboutUsImpactProps) {
           </p>
           <div className="flex w-full flex-col items-start gap-3 lg:flex-row">
             <div className="relative h-[240px] w-full min-w-0 overflow-hidden rounded-[16px] sm:h-[320px] lg:h-[400px] lg:flex-1">
-              <img
+              <ProgressiveImage
                 src={family.src}
                 alt={family.alt}
                 width={family.width}
@@ -82,7 +84,7 @@ export default function AboutUsImpact({ className = '' }: AboutUsImpactProps) {
 
             <div className="flex w-full flex-col gap-3 overflow-hidden lg:size-[400px] lg:shrink-0">
               <div className="relative h-[200px] w-full overflow-hidden rounded-[16px] sm:h-[232px] lg:h-[232px]">
-                <img
+                <ProgressiveImage
                   src={products.src}
                   alt={products.alt}
                   width={products.width}

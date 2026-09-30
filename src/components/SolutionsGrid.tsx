@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Button from '@components/Button'
 import Container from '@components/Container'
+import ProgressiveImage from '@components/ProgressiveImage'
 import {
   solutionsGridConfig,
   type SolutionCardConfig,
@@ -9,6 +10,7 @@ import {
 function SolutionCard({ card }: { card: SolutionCardConfig }) {
   return (
     <article
+      data-reveal-item
       className={[
         'relative h-[420px] overflow-hidden rounded-card sm:h-[440px]',
         card.backgroundClassName,
@@ -36,7 +38,7 @@ function SolutionCard({ card }: { card: SolutionCardConfig }) {
         </p>
       </div>
 
-      <img
+      <ProgressiveImage
         src={card.image.src}
         alt=""
         width={card.image.width}
@@ -60,11 +62,12 @@ export default function SolutionsGrid({ className = '' }: SolutionsGridProps) {
 
   return (
     <section
+      data-reveal
       className={['w-full mt-[100px]', className].filter(Boolean).join(' ')}
       aria-labelledby="solutions-heading"
     >
       <Container className="flex flex-col gap-10 pb-10 sm:gap-12 lg:gap-[68px]">
-        <header className="flex w-full flex-col gap-6 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
+        <header data-reveal-item className="flex w-full flex-col gap-6 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
           <div className="flex max-w-[830px] flex-col gap-3">
             <span className="text-body-sm font-normal tracking-[0.12em] text-primary">
               {badge}

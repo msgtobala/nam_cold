@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { aboutUsHeroConfig } from '@configs/aboutUsHero'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type AboutUsHeroProps = {
   className?: string
@@ -24,11 +25,12 @@ export default function AboutUsHero({ className = '' }: AboutUsHeroProps) {
 
   return (
     <section
+      data-reveal="load"
       className={['w-full bg-surface-warm', className].filter(Boolean).join(' ')}
       aria-label={ariaLabel}
     >
       <div className="mx-auto flex w-full max-w-page flex-col items-start gap-8 px-4 py-14 sm:gap-10 sm:px-8 sm:py-16 lg:h-[720px] lg:flex-row lg:items-center lg:gap-0 lg:py-header lg:pl-page-x lg:pr-[46px]">
-        <div className="flex w-full shrink-0 flex-col gap-8 overflow-hidden lg:w-[588px]">
+        <div data-reveal-item className="flex w-full shrink-0 flex-col gap-8 overflow-hidden lg:w-[588px]">
           <div className="flex w-full flex-col gap-4 overflow-hidden">
             <span className="text-body-sm font-medium uppercase tracking-[1.96px] text-primary">
               {eyebrow}
@@ -57,7 +59,8 @@ export default function AboutUsHero({ className = '' }: AboutUsHeroProps) {
         </div>
 
         <div className="relative h-[240px] w-full shrink-0 overflow-hidden rounded-card sm:h-[360px] lg:h-[560px] lg:w-[758px]">
-          <img
+          <ProgressiveImage
+            data-reveal-media
             src={hero.src}
             alt={hero.alt}
             width={hero.width}

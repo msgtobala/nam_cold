@@ -1,4 +1,5 @@
 import { aboutUsManufacturingConfig } from '@configs/aboutUsManufacturing'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type AboutUsManufacturingProps = {
   className?: string
@@ -15,11 +16,12 @@ export default function AboutUsManufacturing({
 
   return (
     <section
+      data-reveal
       className={['w-full bg-surface', className].filter(Boolean).join(' ')}
       aria-labelledby="about-us-manufacturing-heading"
     >
       <div className="mx-auto flex w-full max-w-page flex-col items-center gap-8 px-4 py-14 sm:px-8 sm:py-16 lg:gap-[38px] lg:px-page-x lg:py-[65px]">
-        <header className="flex w-full flex-col items-center gap-5 overflow-hidden text-center lg:w-[832px]">
+        <header data-reveal-item className="flex w-full flex-col items-center gap-5 overflow-hidden text-center lg:w-[832px]">
           <h2
             id="about-us-manufacturing-heading"
             className="w-full text-[1.75rem] font-normal leading-[1.3] text-ink sm:text-lead lg:text-heading lg:leading-[1.3]"
@@ -32,7 +34,7 @@ export default function AboutUsManufacturing({
         </header>
 
         <div className="relative h-[240px] w-full overflow-hidden rounded-[16px] sm:h-[320px] lg:h-[480px]">
-          <img
+          <ProgressiveImage
             src={image.src}
             alt={image.alt}
             width={image.width}
@@ -45,7 +47,7 @@ export default function AboutUsManufacturing({
 
         <ul className="flex w-full flex-col gap-px overflow-hidden rounded-[12px] lg:flex-row">
           {items.map((item) => (
-            <li
+            <li data-reveal-item
               key={item.id}
               className="flex min-w-0 flex-1 flex-col items-start gap-2 bg-primary p-9"
             >

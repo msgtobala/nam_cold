@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Button from '@components/Button'
 import Container from '@components/Container'
 import { symptomsConfig, type SymptomId } from '@configs/symptoms'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type { SymptomId }
 
@@ -27,6 +28,7 @@ export default function Symptoms({
 
   return (
     <section
+      data-reveal
       className={[
         'w-full bg-[linear-gradient(-28deg,#F5F9FF_28%,#FFFFFF_100%)] pt-[100px] pb-[100px]',
         className,
@@ -36,7 +38,7 @@ export default function Symptoms({
       aria-labelledby="symptoms-heading"
     >
       <Container className="flex flex-col items-center gap-11">
-        <header className="flex w-full max-w-[800px] flex-col items-center gap-4 text-center">
+        <header data-reveal-item className="flex w-full max-w-[800px] flex-col items-center gap-4 text-center">
           <span className="rounded-badge border border-border-primary-soft bg-primary-tint px-4 py-1.5 text-nav font-medium text-primary">
             {badge}
           </span>
@@ -56,7 +58,7 @@ export default function Symptoms({
             const isSelected = selected.includes(symptom.id)
 
             return (
-              <li key={symptom.id} className="flex justify-center">
+              <li data-reveal-item key={symptom.id} className="flex justify-center">
                 <button
                   type="button"
                   aria-pressed={isSelected}
@@ -91,7 +93,7 @@ export default function Symptoms({
                     </span>
                   ) : null}
                   <span className="flex h-[110px] w-[100px] items-center justify-center overflow-hidden">
-                    <img
+                    <ProgressiveImage
                       src={symptom.icon}
                       alt=""
                       width={100}

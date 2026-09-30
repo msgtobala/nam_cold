@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ArrowRightIcon from '@icons/ArrowRightIcon'
 import { featuredInsightsConfig } from '@configs/featuredInsights'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type FeaturedInsightsProps = {
   className?: string
@@ -26,12 +27,13 @@ export default function FeaturedInsights({
 
   return (
     <section
+      data-reveal
       className={['w-full bg-white', className].filter(Boolean).join(' ')}
       aria-label={ariaLabel}
     >
       <div className="mx-auto flex w-full max-w-page flex-col gap-[58px] px-4 py-14 sm:px-8 sm:py-16 lg:px-24 lg:py-20">
         <div className="flex w-full flex-col gap-12 sm:gap-16 lg:gap-[95px]">
-          <header className="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+          <header data-reveal-item className="flex w-full flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
             <div className="flex flex-col gap-2.5">
               <span className="text-body-sm font-medium uppercase tracking-[1.96px] text-primary">
                 {eyebrow}
@@ -56,9 +58,9 @@ export default function FeaturedInsights({
           <div className="flex w-full flex-col gap-10">
             {articles.map((article, index) => (
               <Fragment key={article.id}>
-                <article className="flex w-full flex-col items-start gap-8 lg:flex-row lg:gap-[180px]">
+                <article data-reveal-item className="flex w-full flex-col items-start gap-8 lg:flex-row lg:gap-[180px]">
                   <div className="relative h-[200px] w-full shrink-0 overflow-hidden rounded-[20px] sm:h-[240px] lg:h-[240px] lg:w-[500px]">
-                    <img
+                    <ProgressiveImage
                       src={article.image}
                       alt={article.imageAlt}
                       width={article.imageWidth}
@@ -87,7 +89,7 @@ export default function FeaturedInsights({
                   </div>
                 </article>
                 {index < articles.length - 1 ? (
-                  <img
+                  <ProgressiveImage
                     src={divider}
                     alt=""
                     width={1248}
@@ -109,7 +111,7 @@ export default function FeaturedInsights({
           </p>
           <ul className="flex flex-wrap gap-3">
             {topics.map((topic) => (
-              <li key={topic.id}>
+              <li data-reveal-item key={topic.id}>
                 <span className="inline-flex items-center rounded-full bg-surface-warm px-[18px] py-2.5 text-body-sm font-normal text-ink-strong">
                   {topic.label}
                 </span>

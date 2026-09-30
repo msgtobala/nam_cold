@@ -10,11 +10,12 @@ export default function WhyChoose({ className = '' }: WhyChooseProps) {
 
   return (
     <section
+      data-reveal
       className={['w-full bg-surface', className].filter(Boolean).join(' ')}
       aria-label={ariaLabel}
     >
       <div className="mx-auto flex w-full max-w-page flex-col gap-10 px-4 py-14 sm:gap-[42px] sm:px-8 sm:py-16 lg:px-[72px] lg:py-section-y">
-        <header className="flex w-full flex-col gap-6 overflow-hidden lg:flex-row lg:items-end lg:justify-between">
+        <header data-reveal-item className="flex w-full flex-col gap-6 overflow-hidden lg:flex-row lg:items-end lg:justify-between">
           <div className="flex w-full flex-col gap-3 overflow-hidden lg:w-[760px] lg:shrink-0">
             <span className="text-body-sm font-normal uppercase tracking-[1.68px] text-primary">
               {eyebrow}
@@ -33,7 +34,7 @@ export default function WhyChoose({ className = '' }: WhyChooseProps) {
 
         <ul className="grid w-full grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-4">
           {cards.map((card) => (
-            <li key={card.id} className="min-w-0">
+            <li data-reveal-item key={card.id} className="min-w-0">
               <article className="flex h-full flex-col items-start gap-4 overflow-hidden rounded-card bg-white p-[26px] shadow-card lg:h-[250px]">
                 <div className="relative size-12 shrink-0 overflow-clip">
                   <img

@@ -1,5 +1,6 @@
 import SearchIcon from '@icons/SearchIcon'
 import { insightsLibraryConfig } from '@configs/insightsLibrary'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type InsightsLibraryProps = {
   className?: string
@@ -20,11 +21,12 @@ export default function InsightsLibrary({
 
   return (
     <section
+      data-reveal
       className={['w-full bg-surface-warm', className].filter(Boolean).join(' ')}
       aria-label={ariaLabel}
     >
       <div className="mx-auto flex w-full max-w-page flex-col gap-10 px-4 pt-14 sm:gap-12 sm:px-8 sm:pt-16 lg:gap-12 lg:px-24 lg:pt-[88px] lg:pb-20">
-        <header className="flex w-full flex-col gap-6 sm:gap-8 lg:flex-row lg:items-center lg:justify-between">
+        <header data-reveal-item className="flex w-full flex-col gap-6 sm:gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-col gap-3">
             <span className="text-body-sm font-medium uppercase tracking-[1.96px] text-primary">
               {eyebrow}
@@ -51,10 +53,10 @@ export default function InsightsLibrary({
 
         <ul className="grid w-full grid-cols-1 gap-x-6 gap-y-7 sm:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
-            <li key={article.id} className="h-full min-w-0">
+            <li data-reveal-item key={article.id} className="h-full min-w-0">
               <article className="flex h-full flex-col items-start gap-[18px] overflow-hidden rounded-2xl bg-white p-4 shadow-[0px_10px_30px_0px_rgba(13,26,6,0.07)]">
                 <div className="relative h-[230px] w-full shrink-0 overflow-hidden rounded-[10px]">
-                  <img
+                  <ProgressiveImage
                     src={article.image}
                     alt={article.imageAlt}
                     width={1248}

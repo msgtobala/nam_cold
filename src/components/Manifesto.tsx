@@ -14,6 +14,7 @@ export default function Manifesto({
 }: ManifestoProps) {
   return (
     <section
+      data-reveal
       className={['w-full bg-primary', className].filter(Boolean).join(' ')}
       aria-labelledby="manifesto-heading"
     >

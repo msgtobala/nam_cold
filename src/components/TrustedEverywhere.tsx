@@ -1,4 +1,5 @@
 import { trustedEverywhereConfig } from '@configs/trustedEverywhere'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type TrustedEverywhereProps = {
   className?: string
@@ -21,6 +22,7 @@ export default function TrustedEverywhere({
 
   return (
     <section
+      data-reveal
       className={['relative w-full overflow-x-clip bg-white', className]
         .filter(Boolean)
         .join(' ')}
@@ -34,7 +36,7 @@ export default function TrustedEverywhere({
       <div className="relative mx-auto flex w-full max-w-page flex-col lg:block lg:h-[463px]">
         <div className="pointer-events-none absolute left-[700px] top-[203px] hidden h-[116px] w-[170px] lg:block">
           <div className="absolute inset-[-179.05%_-122.18%]">
-            <img
+            <ProgressiveImage
               src={glow}
               alt=""
               width={585}
@@ -47,7 +49,7 @@ export default function TrustedEverywhere({
         </div>
 
         <div className="relative z-10 flex flex-col gap-8 px-4 py-10 sm:px-8 sm:py-12 lg:w-[700px] lg:gap-0 lg:px-0 lg:pl-[72px] lg:pb-0 lg:pt-[107px]">
-          <div className="flex w-full max-w-[537px] flex-col gap-[9px]">
+          <div data-reveal-item className="flex w-full max-w-[537px] flex-col gap-[9px]">
             <h2
               id="trusted-everywhere-heading"
               className="text-[1.75rem] font-normal leading-[1.3] sm:text-lead lg:text-heading"
@@ -62,10 +64,10 @@ export default function TrustedEverywhere({
 
           <ul className="mt-0 flex flex-col gap-6 sm:flex-row sm:flex-wrap sm:items-center sm:gap-[43px] lg:mt-[22px] lg:flex-nowrap">
             {features.map((feature) => (
-              <li key={feature.id} className="relative flex items-center">
+              <li data-reveal-item key={feature.id} className="relative flex items-center">
                 <span className="relative h-[60px] w-[59px] shrink-0 rounded-[49.5px] bg-white shadow-soft">
                   <span className="pointer-events-none absolute inset-0 overflow-hidden rounded-[49.5px]">
-                    <img
+                    <ProgressiveImage
                       src={feature.icon}
                       alt=""
                       width={59}
@@ -89,7 +91,7 @@ export default function TrustedEverywhere({
               {partnersLabel}
             </span>
             {partners.map((partner) => (
-              <img
+              <ProgressiveImage
                 key={partner.id}
                 src={partner.src}
                 alt={partner.alt}
@@ -103,7 +105,7 @@ export default function TrustedEverywhere({
         </div>
 
         <div className="relative w-full lg:absolute lg:left-[670px] lg:top-0 lg:h-[463px] lg:w-[784px]">
-          <img
+          <ProgressiveImage
             src={pharmacy.src}
             alt={pharmacy.alt}
             width={pharmacy.width}

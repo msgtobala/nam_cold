@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Button from '@components/Button'
 import { blockedNoseConfig } from '@configs/blockedNose'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type BlockedNoseProps = {
   className?: string
@@ -14,13 +15,14 @@ export default function BlockedNose({ className = '' }: BlockedNoseProps) {
 
   return (
     <section
+      data-reveal
       className={['relative w-full overflow-hidden bg-[#0f3fa0]', className]
         .filter(Boolean)
         .join(' ')}
       aria-labelledby="blocked-nose-heading"
     >
       <div className="relative mx-auto w-full max-w-[1440px] xl:aspect-[1440/704]">
-        <img
+        <ProgressiveImage
           src={background.src}
           alt={background.alt}
           width={background.width}
@@ -64,7 +66,7 @@ export default function BlockedNose({ className = '' }: BlockedNoseProps) {
 
           <ul className="flex w-full flex-col gap-4 xl:absolute xl:top-1/2 xl:right-[120px] xl:w-[290px] xl:-translate-y-1/2">
             {benefits.map((benefit) => (
-              <li
+              <li data-reveal-item
                 key={benefit.id}
                 className="flex flex-col gap-2 rounded-2xl border border-white/30 bg-white/8 p-6 backdrop-blur-[13px]"
               >

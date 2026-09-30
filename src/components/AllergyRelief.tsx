@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Button from '@components/Button'
 import { allergyReliefConfig } from '@configs/allergyRelief'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type AllergyReliefProps = {
   className?: string
@@ -14,13 +15,14 @@ export default function AllergyRelief({ className = '' }: AllergyReliefProps) {
 
   return (
     <section
+      data-reveal
       className={['relative w-full overflow-hidden bg-surface-mint', className]
         .filter(Boolean)
         .join(' ')}
       aria-labelledby="allergy-relief-heading"
     >
       {pollen.map((dot, index) => (
-        <img
+        <ProgressiveImage
           key={index}
           src={dot.src}
           alt=""
@@ -35,7 +37,7 @@ export default function AllergyRelief({ className = '' }: AllergyReliefProps) {
 
       <div className="relative z-10 mx-auto flex w-full max-w-page flex-col items-center gap-10 px-4 py-16 sm:px-8 sm:py-20 lg:flex-row lg:gap-20 lg:px-[120px] lg:py-[104px]">
         <div className="relative aspect-[620/560] w-full overflow-hidden rounded-[24px] lg:h-[560px] lg:w-[620px] lg:shrink-0 lg:aspect-auto">
-          <img
+          <ProgressiveImage
             src={visual.src}
             alt={visual.alt}
             width={visual.width}
@@ -70,7 +72,7 @@ export default function AllergyRelief({ className = '' }: AllergyReliefProps) {
 
           <ul className="flex max-w-[432px] flex-wrap gap-2">
             {tags.map((tag) => (
-              <li key={tag}>
+              <li data-reveal-item key={tag}>
                 <span className="inline-flex items-center rounded-full border border-[#d0e8c8] bg-white/[0.78] px-4 py-[9px] text-body-sm font-normal text-accent-forest">
                   {tag}
                 </span>

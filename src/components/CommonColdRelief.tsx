@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Button from '@components/Button'
 import { commonColdReliefConfig } from '@configs/commonColdRelief'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type CommonColdReliefProps = {
   className?: string
@@ -24,12 +25,13 @@ export default function CommonColdRelief({
 
   return (
     <section
+      data-reveal
       className={['w-full bg-[#fafaf8]', className].filter(Boolean).join(' ')}
       aria-labelledby="common-cold-heading"
     >
       <div className="mx-auto flex w-full max-w-page flex-col items-center gap-10 px-4 py-16 sm:px-8 sm:py-20 lg:flex-row lg:gap-[72px] lg:px-[120px] lg:py-[104px]">
         <div className="relative aspect-[600/580] w-full overflow-hidden rounded-[24px] lg:h-[580px] lg:w-[600px] lg:shrink-0 lg:aspect-auto">
-          <img
+          <ProgressiveImage
             src={photography.src}
             alt={photography.alt}
             width={photography.width}
@@ -79,7 +81,7 @@ export default function CommonColdRelief({
           </div>
 
           <div className="relative h-[140px] w-full overflow-hidden rounded-md sm:h-[160px] lg:h-[180px]">
-            <img
+            <ProgressiveImage
               src={products.src}
               alt={products.alt}
               width={products.width}

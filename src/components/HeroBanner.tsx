@@ -1,5 +1,6 @@
 import { heroBanner } from '@resources/hero'
 import { strings } from '@strings/strings'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type HeroBannerProps = {
   className?: string
@@ -13,12 +14,14 @@ export default function HeroBanner({
 }: HeroBannerProps) {
   return (
     <section
+      data-reveal="load"
       className={['relative w-full overflow-hidden bg-[#0b4db3]', className]
         .filter(Boolean)
         .join(' ')}
       aria-label={strings.hero.ariaLabel}
     >
-      <img
+      <ProgressiveImage
+        data-reveal-media
         src={heroBanner}
         alt={alt}
         width={1920}

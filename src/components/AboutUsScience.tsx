@@ -1,4 +1,5 @@
 import { aboutUsScienceConfig } from '@configs/aboutUsScience'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type AboutUsScienceProps = {
   className?: string
@@ -14,13 +15,14 @@ export default function AboutUsScience({ className = '' }: AboutUsScienceProps) 
 
   return (
     <section
+      data-reveal
       className={['w-full bg-surface-cream', className]
         .filter(Boolean)
         .join(' ')}
       aria-labelledby="about-us-science-heading"
     >
       <div className="mx-auto flex w-full max-w-page flex-col items-start gap-10 px-4 py-14 sm:gap-12 sm:px-8 sm:py-16 lg:gap-16 lg:px-page-x lg:py-[96px]">
-        <header className="flex w-full flex-col items-start justify-between gap-6 lg:flex-row">
+        <header data-reveal-item className="flex w-full flex-col items-start justify-between gap-6 lg:flex-row">
           <div className="flex w-full shrink-0 flex-col items-start gap-1.5 lg:w-[140px]">
             <p className="text-caption font-semibold leading-[13px] tracking-[1.54px] text-accent-leaf">
               {index}
@@ -43,7 +45,7 @@ export default function AboutUsScience({ className = '' }: AboutUsScienceProps) 
         </header>
 
         <div className="relative h-[240px] w-full overflow-hidden rounded-[16px] sm:h-[360px] lg:h-[520px]">
-          <img
+          <ProgressiveImage
             src={image.src}
             alt={image.alt}
             width={image.width}
@@ -56,7 +58,7 @@ export default function AboutUsScience({ className = '' }: AboutUsScienceProps) 
 
         <ul className="flex w-full flex-col gap-px overflow-hidden rounded-[12px] lg:flex-row">
           {stats.map((stat) => (
-            <li
+            <li data-reveal-item
               key={stat.id}
               className="flex min-w-0 flex-1 flex-col items-start gap-2 bg-surface-sand p-9"
             >

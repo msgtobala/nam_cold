@@ -1,4 +1,5 @@
 import { statHeroConfig } from '@configs/statHero'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type StatHeroProps = {
   className?: string
@@ -10,13 +11,14 @@ export default function StatHero({ className = '' }: StatHeroProps) {
 
   return (
     <section
+      data-reveal
       className={['relative w-full overflow-hidden', className]
         .filter(Boolean)
         .join(' ')}
       aria-label={ariaLabel}
     >
       <div className="relative w-full aspect-[1920/742]">
-        <img
+        <ProgressiveImage
           src={banner.src}
           alt={alt}
           width={banner.width}

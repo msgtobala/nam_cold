@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { journeyConfig, type JourneyStepConfig } from '@configs/journey'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type JourneyProps = {
   badge?: string
@@ -54,13 +55,14 @@ export default function Journey({
 }: JourneyProps) {
   return (
     <section
+      data-reveal
       className={['w-full bg-white pt-14 pb-16 sm:pt-16 lg:pt-[56px] lg:pb-[99px]', className]
         .filter(Boolean)
         .join(' ')}
       aria-labelledby={headingId}
     >
       <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center">
-        <header className="flex w-full max-w-[800px] flex-col items-center gap-3 px-4 text-center sm:px-6 lg:px-0">
+        <header data-reveal-item className="flex w-full max-w-[800px] flex-col items-center gap-3 px-4 text-center sm:px-6 lg:px-0">
           <span className="px-4 py-1.5 text-body-sm font-normal tracking-[1.68px] text-primary">
             {badge}
           </span>
@@ -87,7 +89,7 @@ export default function Journey({
           <div className="relative aspect-[1440/220] w-full overflow-hidden">
             <div className="absolute inset-x-0 top-0 aspect-[1440/347]">
               <div className="absolute top-0 left-[0.208%] h-full w-[99.792%] overflow-hidden">
-                <img
+                <ProgressiveImage
                   src={timelineImage}
                   alt={timelineAlt}
                   width={timelineWidth}
@@ -98,7 +100,7 @@ export default function Journey({
                 />
               </div>
               <div className="pointer-events-none absolute top-[8.069%] left-[58.333%] h-[44.957%] w-[10.486%]">
-                <img
+                <ProgressiveImage
                   src={glowImage}
                   alt=""
                   width={glowWidth}
@@ -110,7 +112,7 @@ export default function Journey({
                 />
               </div>
               <div className="pointer-events-none absolute top-[8.069%] left-[61.181%] h-[43.228%] w-[3.958%] overflow-hidden">
-                <img
+                <ProgressiveImage
                   src={productImage}
                   alt=""
                   width={productWidth}
@@ -126,7 +128,7 @@ export default function Journey({
 
           <ul className="mt-8 grid grid-cols-1 gap-6 px-4 sm:grid-cols-2 sm:px-6 lg:mt-[1.806%] lg:grid-cols-[5.833333%_14.166667%_11.388889%_14.166667%_10.555556%_14.166667%_10.555556%_14.166667%_5%] lg:gap-0 lg:px-0">
             {steps.map((step, index) => (
-              <li
+              <li data-reveal-item
                 key={step.id}
                 className={[
                   'mx-auto flex w-full max-w-[204px] flex-col items-center gap-1.5 text-center',

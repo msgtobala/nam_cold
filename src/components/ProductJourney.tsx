@@ -1,5 +1,6 @@
 import Container from '@components/Container'
 import { productJourneyConfig } from '@configs/productJourney'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type ProductJourneyProps = {
   className?: string
@@ -23,6 +24,7 @@ export default function ProductJourney({ className = '' }: ProductJourneyProps) 
 
   return (
     <section
+      data-reveal
       className={[
         'w-full bg-white pt-14 pb-16 sm:pt-16 lg:pt-[56px] lg:pb-20',
         className,
@@ -32,7 +34,7 @@ export default function ProductJourney({ className = '' }: ProductJourneyProps) 
       aria-labelledby={headingId}
     >
       <Container className="flex flex-col items-center gap-10 lg:gap-12">
-        <header className="flex w-full max-w-[800px] flex-col items-center gap-3 text-center">
+        <header data-reveal-item className="flex w-full max-w-[800px] flex-col items-center gap-3 text-center">
           <span className="px-4 py-1.5 text-body-sm font-normal tracking-[1.68px] text-primary">
             {badge}
           </span>
@@ -53,7 +55,7 @@ export default function ProductJourney({ className = '' }: ProductJourneyProps) 
 
         <div className="flex w-full flex-col gap-6 lg:gap-2">
           <div className="relative mx-auto w-full max-w-[1440px] overflow-hidden">
-            <img
+            <ProgressiveImage
               src={timelineImage}
               alt={timelineAlt}
               width={timelineWidth}
@@ -66,7 +68,7 @@ export default function ProductJourney({ className = '' }: ProductJourneyProps) 
 
           <ul className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
             {steps.map((step) => (
-              <li
+              <li data-reveal-item
                 key={step.id}
                 className="mx-auto flex w-full max-w-[204px] flex-col items-center gap-1.5 text-center"
               >

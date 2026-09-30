@@ -36,9 +36,9 @@ export const strings = {
 
   productsHero: {
     ariaLabel: 'NAM COLD OXY product hero',
-    badge: 'New formula · Faster relief',
+    badge: 'Everyday care · Trusted relief',
     heading:
-      'Everyday care, Trusted relief Instead of new formulation, faster relief',
+      'Khul ke\nsaas lo.',
     bannerAlt: 'NAM COLD OXY nasal spray and carton on a bright terrace',
     stats: {
       onset: {

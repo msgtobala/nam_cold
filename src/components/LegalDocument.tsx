@@ -62,7 +62,7 @@ export default function LegalDocument({
   linkPrivacyPolicy = false,
 }: LegalDocumentProps) {
   return (
-    <article className="w-full bg-white">
+    <article data-reveal="load" className="w-full bg-white">
       <Container className="flex flex-col gap-10 py-14 sm:py-16 lg:py-[96px]">
         <header className="flex max-w-[760px] flex-col gap-4">
           <p className="text-body-sm font-semibold uppercase tracking-[1.96px] text-primary">

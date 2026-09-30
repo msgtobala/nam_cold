@@ -35,6 +35,7 @@ export default function Footer({
 
   return (
     <footer
+      data-reveal
       className={[
         'w-full [background-image:var(--gradient-footer)] pb-10 pt-[100px] text-white',
         className,

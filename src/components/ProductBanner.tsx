@@ -1,4 +1,5 @@
 import { productBannerConfig } from '@configs/productBanner'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type ProductBannerProps = {
   className?: string
@@ -15,12 +16,14 @@ export default function ProductBanner({
 
   return (
     <section
+      data-reveal
       className={[topGapClassName, 'relative w-full overflow-hidden', className]
         .filter(Boolean)
         .join(' ')}
       aria-label={ariaLabel}
     >
-      <img
+      <ProgressiveImage
+        data-reveal-item
         src={image}
         alt={alt}
         width={width}

@@ -1,4 +1,5 @@
 import { aboutUsOriginConfig } from '@configs/aboutUsOrigin'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type AboutUsOriginProps = {
   className?: string
@@ -14,6 +15,7 @@ export default function AboutUsOrigin({ className = '' }: AboutUsOriginProps) {
 
   return (
     <section
+      data-reveal
       id="our-story"
       className={['w-full bg-surface-warm', className].filter(Boolean).join(' ')}
       aria-labelledby="about-us-origin-heading"
@@ -40,7 +42,7 @@ export default function AboutUsOrigin({ className = '' }: AboutUsOriginProps) {
         </div>
 
         <div className="relative h-[240px] w-full min-w-0 overflow-hidden rounded-[16px] sm:h-[320px] lg:h-[400px] lg:flex-1">
-          <img
+          <ProgressiveImage
             src={image.src}
             alt={image.alt}
             width={image.width}

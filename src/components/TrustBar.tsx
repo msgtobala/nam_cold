@@ -10,6 +10,7 @@ export default function TrustBar({ className = '' }: TrustBarProps) {
 
   return (
     <section
+      data-reveal
       className={[
         'w-full border-b border-[#e0e8ff] bg-primary',
         className,
@@ -21,7 +22,7 @@ export default function TrustBar({ className = '' }: TrustBarProps) {
       <div className="mx-auto flex w-full max-w-page flex-col gap-3 px-4 py-[18px] sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:gap-8 lg:px-20">
         <ul className="flex flex-wrap items-center gap-x-8 gap-y-3">
           {items.map((item) => (
-            <li key={item.id} className="flex items-center gap-2">
+            <li data-reveal-item key={item.id} className="flex items-center gap-2">
               <span className="relative size-3.5 shrink-0 overflow-clip">
                 <img
                   src={item.icon}

@@ -13,11 +13,12 @@ export default function AboutUsPromise({ className = '' }: AboutUsPromiseProps) 
 
   return (
     <section
+      data-reveal
       className={['w-full bg-surface-cream', className].filter(Boolean).join(' ')}
       aria-labelledby="about-us-promise-heading"
     >
       <div className="mx-auto flex w-full max-w-page flex-col items-start gap-10 px-4 py-14 sm:gap-12 sm:px-8 sm:py-16 lg:gap-16 lg:px-page-x lg:py-[96px]">
-        <header className="flex w-full flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
+        <header data-reveal-item className="flex w-full flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
           <h2
             id="about-us-promise-heading"
             className="w-full shrink-0 text-[1.75rem] font-normal leading-[1.04] tracking-[-1.2px] text-ink sm:text-lead lg:w-[325px] lg:text-heading lg:leading-[1.04] lg:tracking-[-1.2px]"
@@ -31,7 +32,7 @@ export default function AboutUsPromise({ className = '' }: AboutUsPromiseProps) 
 
         <ul className="flex w-full flex-col gap-2 lg:flex-row">
           {cards.map((card) => (
-            <li
+            <li data-reveal-item
               key={card.id}
               className={[
                 'flex min-w-0 flex-1 flex-col items-start gap-8 overflow-hidden rounded-[16px] p-8 lg:h-[217px]',

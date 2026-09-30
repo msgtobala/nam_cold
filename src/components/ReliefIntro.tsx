@@ -15,6 +15,7 @@ export default function ReliefIntro({
 }: ReliefIntroProps) {
   return (
     <section
+      data-reveal
       className={['w-full bg-white pt-[116px] pb-[90px]', className]
         .filter(Boolean)
         .join(' ')}

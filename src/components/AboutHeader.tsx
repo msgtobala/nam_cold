@@ -1,4 +1,5 @@
 import { aboutHeaderConfig } from '@configs/aboutHeader'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type AboutHeaderProps = {
   className?: string
@@ -10,11 +11,12 @@ export default function AboutHeader({ className = '' }: AboutHeaderProps) {
 
   return (
     <section
+      data-reveal="load"
       className={['w-full bg-[#f8fbff]', className].filter(Boolean).join(' ')}
       aria-label={ariaLabel}
     >
       <div className="mx-auto flex w-full max-w-page flex-col gap-6 px-4 pb-12 pt-14 sm:gap-6 sm:px-8 sm:pb-16 sm:pt-16 lg:gap-6 lg:px-24 lg:pb-[72px] lg:pt-[76px]">
-        <div className="flex w-full flex-col gap-5 overflow-hidden">
+        <div data-reveal-item className="flex w-full flex-col gap-5 overflow-hidden">
           <span className="text-body-sm font-medium uppercase tracking-[1.96px] text-primary">
             {eyebrow}
           </span>
@@ -27,7 +29,8 @@ export default function AboutHeader({ className = '' }: AboutHeaderProps) {
         </div>
 
         <div className="relative h-[240px] w-full overflow-hidden rounded-[24px] sm:h-[340px] lg:h-[429px]">
-          <img
+          <ProgressiveImage
+            data-reveal-media
             src={hero.src}
             alt={hero.alt}
             width={hero.width}

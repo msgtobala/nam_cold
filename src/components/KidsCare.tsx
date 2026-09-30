@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Button from '@components/Button'
 import { kidsCareConfig } from '@configs/kidsCare'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type KidsCareProps = {
   className?: string
@@ -14,6 +15,7 @@ export default function KidsCare({ className = '' }: KidsCareProps) {
 
   return (
     <section
+      data-reveal
       className={['w-full bg-[#fff8f0]', className].filter(Boolean).join(' ')}
       aria-labelledby="kids-care-heading"
     >
@@ -62,7 +64,7 @@ export default function KidsCare({ className = '' }: KidsCareProps) {
           </div>
 
           <div className="relative h-[140px] w-full overflow-hidden rounded-[12px]">
-            <img
+            <ProgressiveImage
               src={products.src}
               alt={products.alt}
               width={products.width}
@@ -84,7 +86,7 @@ export default function KidsCare({ className = '' }: KidsCareProps) {
         </div>
 
         <div className="relative aspect-[608/560] w-full min-w-0 flex-1 overflow-hidden rounded-[24px] lg:h-[560px] lg:aspect-auto">
-          <img
+          <ProgressiveImage
             src={family.src}
             alt={family.alt}
             width={family.width}

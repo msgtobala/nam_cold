@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import Container from '@components/Container'
 import ArrowRightIcon from '@icons/ArrowRightIcon'
 import { knowledgeHubConfig } from '@configs/knowledgeHub'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type KnowledgeHubProps = {
   className?: string
@@ -15,11 +16,12 @@ export default function KnowledgeHub({ className = '' }: KnowledgeHubProps) {
 
   return (
     <section
+      data-reveal
       className={['w-full bg-white', className].filter(Boolean).join(' ')}
       aria-labelledby="knowledge-hub-heading"
     >
       <Container className="flex flex-col gap-8 py-14 sm:gap-10 sm:py-16 lg:gap-10 lg:py-[88px]">
-        <header className="flex w-full flex-col gap-4 sm:gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <header data-reveal-item className="flex w-full flex-col gap-4 sm:gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="flex max-w-[700px] flex-col gap-3">
             <span className="text-body-sm font-normal uppercase tracking-[1.68px] text-primary">
               {eyebrow}
@@ -43,10 +45,10 @@ export default function KnowledgeHub({ className = '' }: KnowledgeHubProps) {
 
         <ul className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
           {articles.map((article) => (
-            <li key={article.id} className="h-full">
+            <li data-reveal-item key={article.id} className="h-full">
               <article className="flex h-full flex-col overflow-hidden rounded-card border border-border bg-white">
                 <div className="relative h-[191px] w-full shrink-0 overflow-hidden">
-                  <img
+                  <ProgressiveImage
                     src={article.image}
                     alt={article.imageAlt}
                     width={318}

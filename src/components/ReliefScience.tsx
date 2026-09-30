@@ -14,6 +14,7 @@ export default function ReliefScience({ className = '' }: ReliefScienceProps) {
 
   return (
     <section
+      data-reveal
       className={['relative w-full overflow-hidden', className]
         .filter(Boolean)
         .join(' ')}
@@ -24,7 +25,7 @@ export default function ReliefScience({ className = '' }: ReliefScienceProps) {
       aria-labelledby="relief-science-heading"
     >
       <div className="mx-auto flex w-full max-w-page flex-col gap-12 px-4 py-16 sm:gap-14 sm:px-8 sm:py-20 lg:gap-[72px] lg:px-[120px] lg:py-[104px]">
-        <header className="flex w-full flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <header data-reveal-item className="flex w-full flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="flex max-w-[620px] flex-col gap-3">
             <span className="text-caption font-semibold tracking-[1.54px] text-accent-amber">
               {eyebrow}
@@ -43,7 +44,7 @@ export default function ReliefScience({ className = '' }: ReliefScienceProps) {
 
         <ol className="flex w-full flex-col">
           {steps.map((step) => (
-            <li
+            <li data-reveal-item
               key={step.id}
               className="flex flex-col gap-4 border-b border-white/52 py-8 sm:gap-6 sm:py-10 lg:flex-row lg:items-center lg:gap-12"
             >

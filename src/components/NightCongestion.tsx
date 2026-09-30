@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Button from '@components/Button'
 import { nightCongestionConfig } from '@configs/nightCongestion'
+import ProgressiveImage from '@components/ProgressiveImage'
 
 export type NightCongestionProps = {
   className?: string
@@ -24,6 +25,7 @@ export default function NightCongestion({
 
   return (
     <section
+      data-reveal
       className={['relative w-full overflow-hidden bg-footer-deep', className]
         .filter(Boolean)
         .join(' ')}
@@ -54,7 +56,7 @@ export default function NightCongestion({
 
           <div className="flex w-full items-center gap-[18px] overflow-hidden rounded-card border border-white/10 bg-white/[0.06] p-4 sm:p-5">
             <div className="relative h-[100px] w-20 shrink-0 overflow-hidden rounded-[10px] bg-white">
-              <img
+              <ProgressiveImage
                 src={recommendation.product.src}
                 alt={recommendation.product.alt}
                 width={recommendation.product.width}
@@ -92,7 +94,7 @@ export default function NightCongestion({
             className="pointer-events-none absolute top-0 right-2 z-0 size-[140px] sm:right-4 sm:size-[180px] lg:right-0 lg:size-[220px]"
             aria-hidden="true"
           >
-            <img
+            <ProgressiveImage
               src={moonGlow}
               alt=""
               width={420}
@@ -104,7 +106,7 @@ export default function NightCongestion({
           </div>
 
           <div className="relative z-10 aspect-[608/600] w-full overflow-hidden rounded-[24px] lg:h-[600px] lg:aspect-auto">
-            <img
+            <ProgressiveImage
               src={sleep.src}
               alt={sleep.alt}
               width={sleep.width}

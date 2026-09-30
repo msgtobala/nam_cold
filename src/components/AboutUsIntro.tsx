@@ -10,6 +10,7 @@ export default function AboutUsIntro({ className = '' }: AboutUsIntroProps) {
 
   return (
     <section
+      data-reveal
       className={[
         'w-full border-y border-solid border-border-warm bg-white',
         className,
