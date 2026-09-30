@@ -1,4 +1,4 @@
-import background from '@assets/images/solutions/blocked-nose/background.png'
+import background from '@assets/images/solutions/blocked-nose/hero.png'
 
 export const blockedNoseImages = {
   background,

@@ -1,7 +1,5 @@
-import background from '@assets/images/products/hero/background.png'
-import product from '@assets/images/products/hero/product.png'
+import banner from '@assets/images/products/hero/banner.png'
 
 export const productsHeroImages = {
-  background,
-  product,
+  banner,
 } as const

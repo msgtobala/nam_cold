@@ -8,6 +8,7 @@ export type FaqItemConfig = {
   answer: string
 }
 
+/** Figma Products FAQ (177:1806) */
 export const faqConfig = {
   eyebrow: copy.eyebrow,
   headingAccent: copy.headingAccent,
@@ -37,6 +38,16 @@ export const faqConfig = {
       id: 'storage',
       question: copy.items.storage.question,
       answer: copy.items.storage.answer,
+    },
+    {
+      id: 'other-medicines',
+      question: copy.items.otherMedicines.question,
+      answer: copy.items.otherMedicines.answer,
+    },
+    {
+      id: 'store-general',
+      question: copy.items.storeGeneral.question,
+      answer: copy.items.storeGeneral.answer,
     },
   ] satisfies FaqItemConfig[],
 } as const

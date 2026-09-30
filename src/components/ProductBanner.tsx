@@ -20,16 +20,14 @@ export default function ProductBanner({
         .join(' ')}
       aria-label={ariaLabel}
     >
-      <div className="relative w-full aspect-[1440/682]">
-        <img
-          src={image}
-          alt={alt}
-          width={width}
-          height={height}
-          className="absolute inset-0 size-full object-cover object-center"
-          decoding="async"
-        />
-      </div>
+      <img
+        src={image}
+        alt={alt}
+        width={width}
+        height={height}
+        className="block h-auto w-full"
+        decoding="async"
+      />
     </section>
   )
 }

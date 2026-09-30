@@ -4,14 +4,14 @@ export type TrustBarProps = {
   className?: string
 }
 
-/** Figma Products trust bar (1:1609) */
+/** Figma Products trust bar (177:1607) */
 export default function TrustBar({ className = '' }: TrustBarProps) {
   const { ariaLabel, deliveryNote, items } = trustBarConfig
 
   return (
     <section
       className={[
-        'w-full border-b border-[#e0e8ff] bg-[#f0f4ff]',
+        'w-full border-b border-[#e0e8ff] bg-primary',
         className,
       ]
         .filter(Boolean)
@@ -33,14 +33,14 @@ export default function TrustBar({ className = '' }: TrustBarProps) {
                   aria-hidden="true"
                 />
               </span>
-              <span className="whitespace-nowrap text-body-sm font-normal text-primary-bright">
+              <span className="whitespace-nowrap text-body-sm font-normal text-white">
                 {item.label}
               </span>
             </li>
           ))}
         </ul>
 
-        <p className="shrink-0 whitespace-nowrap text-body-sm font-normal text-[#8a94a6]">
+        <p className="shrink-0 whitespace-nowrap text-body-sm font-normal text-[#d2def5]">
           {deliveryNote}
         </p>
       </div>

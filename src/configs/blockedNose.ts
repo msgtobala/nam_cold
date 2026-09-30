@@ -12,8 +12,8 @@ export const blockedNoseConfig = {
   background: {
     src: blockedNoseImages.background,
     alt: copy.backgroundAlt,
-    width: 1440,
-    height: 640,
+    width: 2880,
+    height: 1408,
   },
   benefits: [
     {

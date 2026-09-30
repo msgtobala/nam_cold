@@ -11,26 +11,26 @@ export const kidsCareConfig = {
   ctaHref: '/products',
   stats: [
     {
-      id: 'from-birth',
-      value: copy.stats.fromBirth.value,
-      label: copy.stats.fromBirth.label,
+      id: 'newborn-care',
+      title: copy.stats.newbornCare.title,
+      description: copy.stats.newbornCare.description,
     },
     {
       id: 'gentle',
-      value: copy.stats.gentle.value,
-      label: copy.stats.gentle.label,
+      title: copy.stats.gentle.title,
+      description: copy.stats.gentle.description,
     },
   ],
   products: {
     src: kidsCareImages.products,
     alt: copy.productsAlt,
-    width: 520,
-    height: 140,
+    width: 1536,
+    height: 672,
   },
   family: {
     src: kidsCareImages.family,
     alt: copy.familyAlt,
-    width: 608,
-    height: 560,
+    width: 1184,
+    height: 864,
   },
 } as const

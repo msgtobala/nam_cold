@@ -5,20 +5,13 @@ const copy = strings.productsHero
 
 export const productsHeroConfig = {
   badge: copy.badge,
-  headingLine1: copy.headingLine1,
-  headingLine2: copy.headingLine2,
-  description: copy.description,
+  heading: copy.heading,
   ariaLabel: copy.ariaLabel,
-  background: {
-    src: productsHeroImages.background,
-    width: 1344,
-    height: 768,
-  },
-  product: {
-    src: productsHeroImages.product,
-    alt: copy.productAlt,
-    width: 1024,
-    height: 1024,
+  banner: {
+    src: productsHeroImages.banner,
+    alt: copy.bannerAlt,
+    width: 1774,
+    height: 887,
   },
   stats: [
     {
@@ -30,11 +23,6 @@ export const productsHeroConfig = {
       id: 'duration',
       value: copy.stats.duration.value,
       label: copy.stats.duration.label,
-    },
-    {
-      id: 'dose',
-      value: copy.stats.dose.value,
-      label: copy.stats.dose.label,
     },
   ],
 } as const

@@ -1,5 +1,5 @@
-import glow from '@assets/images/products/stat-hero/glow.svg'
+import fastAction from '@assets/images/products/stat-hero/fast-action.jpg'
 
 export const statHeroImages = {
-  glow,
+  banner: fastAction,
 } as const

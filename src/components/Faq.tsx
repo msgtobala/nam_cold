@@ -5,7 +5,7 @@ export type FaqProps = {
   className?: string
 }
 
-/** Figma Products FAQ (1:1796) */
+/** Figma Products FAQ (177:1806) */
 export default function Faq({ className = '' }: FaqProps) {
   const { eyebrow, headingAccent, headingRest, items } = faqConfig
   const [openId, setOpenId] = useState<string | null>(null)
@@ -45,7 +45,7 @@ export default function Faq({ className = '' }: FaqProps) {
                   aria-controls={panelId}
                   onClick={() => setOpenId(isOpen ? null : item.id)}
                 >
-                  <span className="text-body font-normal text-[#0a1838] sm:text-card-title">
+                  <span className="text-card-title font-normal text-[#0a1838]">
                     {item.question}
                   </span>
                   <span

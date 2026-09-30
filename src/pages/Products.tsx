@@ -7,7 +7,6 @@ import ProductsHero from '@components/ProductsHero'
 import Reviews from '@components/Reviews'
 import StatHero from '@components/StatHero'
 import TrustBar from '@components/TrustBar'
-import TrustedEverywhere from '@components/TrustedEverywhere'
 
 export default function Products() {
   return (
@@ -21,7 +20,6 @@ export default function Products() {
       <Reviews />
       <Faq />
       <KnowledgeHub />
-      <TrustedEverywhere />
     </>
   )
 }

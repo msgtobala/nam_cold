@@ -1,33 +1,24 @@
 import { solutionImages } from '@resources/solutions'
 import { strings } from '@strings/strings'
 
-export type SolutionCardImage =
-  | {
-      type: 'framed'
-      src: string
-      width: number
-      height: number
-      frameClassName: string
-      imageClassName: string
-    }
-  | {
-      type: 'direct'
-      src: string
-      width: number
-      height: number
-      imageClassName: string
-    }
+export type SolutionCardImage = {
+  src: string
+  width: number
+  height: number
+  /** Absolute positioning + size for the product shot */
+  imageClassName: string
+}
 
 export type SolutionCardConfig = {
   id: string
+  question: string
   title: string
-  subtitle: string
   description: string
   backgroundClassName: string
   titleClassName: string
   contentClassName: string
   descriptionClassName?: string
-  image?: SolutionCardImage
+  image: SolutionCardImage
 }
 
 const copy = strings.solutions.items
@@ -39,102 +30,68 @@ export const solutionsGridConfig = {
   description: strings.solutions.description,
   cta: strings.solutions.cta,
   ctaPath: '/products',
-  topRow: [
+  cards: [
     {
-      id: 'nasal-relief',
-      title: copy.nasalRelief.title,
-      subtitle: copy.nasalRelief.subtitle,
-      description: copy.nasalRelief.description,
+      id: 'oxy',
+      question: copy.oxy.question,
+      title: copy.oxy.title,
+      description: copy.oxy.description,
       backgroundClassName: 'bg-[#e2dbf5]',
-      titleClassName: 'text-accent-purple',
-      contentClassName: 'relative z-10 flex flex-col px-7 pt-[55px]',
-      descriptionClassName: 'mt-[5px] max-w-[186px] text-body-sm font-normal text-black/50',
+      titleClassName: 'uppercase text-accent-purple',
+      // Figma 185:3020 — card 419×440; text left 28 / top 37
+      contentClassName:
+        'relative z-10 flex max-w-[268px] flex-col px-7 pt-[37px]',
+      descriptionClassName:
+        'mt-3 max-w-[222px] text-body-sm font-normal leading-[1.2] text-black/50',
       image: {
-        type: 'framed',
-        src: solutionImages.nasalRelief,
-        width: 354,
-        height: 344,
-        frameClassName:
-          'pointer-events-none absolute bottom-[-10px] left-[186px] h-[344px] w-[354px] overflow-hidden',
-        imageClassName: 'size-full max-w-none object-cover object-left-top',
+        src: solutionImages.oxy,
+        width: 1286,
+        height: 1201,
+        // Figma 170:564 clip: left 115, top 155, 299×291 on 419×440 (slight bottom overflow)
+        imageClassName:
+          'pointer-events-none absolute bottom-[-6px] left-[27.45%] h-[66.14%] w-[71.36%] object-cover object-left-top',
       },
     },
     {
-      id: 'cold-relief',
-      title: copy.coldRelief.title,
-      subtitle: copy.coldRelief.subtitle,
-      description: copy.coldRelief.description,
+      id: 'ns',
+      question: copy.ns.question,
+      title: copy.ns.title,
+      description: copy.ns.description,
       backgroundClassName: 'bg-[#cbdef8]',
       titleClassName: 'text-primary',
-      contentClassName: 'relative z-10 flex flex-col px-7 pt-10',
-      descriptionClassName: 'mt-[5px] max-w-[268px] text-body-sm font-normal text-black/50',
+      // Figma 170:544 — card 418×440; text left 46 / top 37; desc width 243 (2 lines)
+      contentClassName:
+        'relative z-10 flex flex-col pl-[46px] pr-7 pt-[37px]',
+      descriptionClassName:
+        'mt-3 w-[243px] max-w-[243px] text-body-sm font-normal leading-[1.2] text-black/50',
       image: {
-        type: 'framed',
-        src: solutionImages.coldRelief,
-        width: 347,
-        height: 347,
-        frameClassName:
-          'pointer-events-none absolute top-[174px] left-[35px] h-[250px] w-[220px] overflow-hidden',
+        src: solutionImages.ns,
+        width: 452,
+        height: 546,
+        // Figma 170:545: left 96, top 167, 226×273 on 418×440 (flush bottom)
         imageClassName:
-          'absolute -top-[16.4%] -left-[32.27%] h-[138.8%] w-[157.73%] max-w-none',
+          'pointer-events-none absolute bottom-0 left-[22.97%] h-[62.05%] w-[54.07%] object-cover object-bottom',
       },
     },
     {
-      id: 'kids-care',
-      title: copy.kidsCare.title,
-      subtitle: copy.kidsCare.subtitle,
-      description: copy.kidsCare.description,
+      id: 'vepocaps',
+      question: copy.vepocaps.question,
+      title: copy.vepocaps.title,
+      description: copy.vepocaps.description,
       backgroundClassName: 'bg-[#feebf1]',
       titleClassName: 'text-accent-pink',
-      contentClassName: 'relative z-10 flex flex-col px-7 pt-10',
-      descriptionClassName: 'mt-[5px] max-w-[342px] text-body-sm font-normal text-black/50',
+      // Figma 185:3021 — card 418×440; text left 36 / top 37; desc width 243 (2 lines)
+      contentClassName:
+        'relative z-10 flex flex-col pl-9 pr-7 pt-[37px]',
+      descriptionClassName:
+        'mt-3 w-[243px] max-w-[243px] text-body-sm font-normal leading-[1.2] text-black/50',
       image: {
-        type: 'direct',
-        src: solutionImages.kidsCare,
-        width: 347,
-        height: 307,
+        src: solutionImages.vepocaps,
+        width: 664,
+        height: 504,
+        // Figma 170:607: left 46, top 172, 332×252, radius 14 on 418×440
         imageClassName:
-          'pointer-events-none absolute bottom-4 left-1/2 h-[290px] w-auto max-w-[92%] -translate-x-1/2 object-contain object-bottom',
-      },
-    },
-  ] satisfies SolutionCardConfig[],
-  bottomRow: [
-    {
-      id: 'allergy-relief',
-      title: copy.allergyRelief.title,
-      subtitle: copy.allergyRelief.subtitle,
-      description: copy.allergyRelief.description,
-      backgroundClassName: 'bg-[#e1ecce]',
-      titleClassName: 'text-accent-green',
-      contentClassName: 'relative z-10 flex max-w-[226px] flex-col px-8 pt-11',
-      descriptionClassName: 'mt-[5px] text-body-sm font-normal text-black/50',
-      image: {
-        type: 'framed',
-        src: solutionImages.allergyRelief,
-        width: 448,
-        height: 449,
-        frameClassName:
-          'pointer-events-none absolute top-[54px] left-[234px] h-[379px] w-[376px] overflow-hidden',
-        imageClassName:
-          'absolute -top-[7.51%] -left-[8.93%] h-[118.43%] w-[119.24%] max-w-none',
-      },
-    },
-    {
-      id: 'daily-care',
-      title: copy.dailyCare.title,
-      subtitle: copy.dailyCare.subtitle,
-      description: copy.dailyCare.description,
-      backgroundClassName: 'bg-[#bad7f7]',
-      titleClassName: 'text-primary',
-      contentClassName: 'relative z-10 flex flex-col px-8 pt-8',
-      descriptionClassName: 'mt-[5px] max-w-[233px] text-body-sm font-normal text-black/50',
-      image: {
-        type: 'direct',
-        src: solutionImages.dailyCare,
-        width: 306,
-        height: 370,
-        imageClassName:
-          'pointer-events-none absolute right-8 bottom-4 h-auto w-auto max-w-none object-contain object-bottom',
+          'pointer-events-none absolute left-[11%] top-[39.09%] h-[57.27%] w-[79.43%] rounded-[14px] object-cover object-center',
       },
     },
   ] satisfies SolutionCardConfig[],

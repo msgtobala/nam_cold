@@ -5,9 +5,10 @@ const copy = strings.statHero
 
 export const statHeroConfig = {
   ariaLabel: copy.ariaLabel,
-  eyebrow: copy.eyebrow,
-  value: copy.value,
-  watermark: copy.watermark,
-  description: copy.description,
-  glow: statHeroImages.glow,
+  alt: copy.alt,
+  banner: {
+    src: statHeroImages.banner,
+    width: 1024,
+    height: 395,
+  },
 } as const

@@ -16,6 +16,7 @@ export const trustedEverywhereConfig = {
     width: 784,
     height: 463,
   },
+  glow: images.glow,
   features: [
     {
       id: 'genuine',
@@ -43,7 +44,7 @@ export const trustedEverywhereConfig = {
       alt: 'TATA 1mg',
       width: 69,
       height: 20,
-      className: 'h-5 w-auto',
+      className: 'h-5 w-[69px] shrink-0 object-contain',
     },
     {
       id: 'pharmeasy',
@@ -51,7 +52,7 @@ export const trustedEverywhereConfig = {
       alt: 'PharmEasy',
       width: 83,
       height: 23,
-      className: 'h-[23px] w-auto',
+      className: 'h-[23px] w-[83px] shrink-0 object-contain',
     },
     {
       id: 'apollo',
@@ -59,7 +60,7 @@ export const trustedEverywhereConfig = {
       alt: 'Apollo Pharmacy',
       width: 57,
       height: 48,
-      className: 'h-12 w-auto',
+      className: 'h-12 w-[57px] shrink-0 object-contain',
     },
   ],
 } as const

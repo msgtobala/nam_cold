@@ -1,4 +1,4 @@
-import { journeyTimeline } from '@resources/journey'
+import { journeyGlow, journeyProduct, journeyTimeline } from '@resources/journey'
 import { strings } from '@strings/strings'
 
 const steps = strings.journey.steps
@@ -19,6 +19,12 @@ export const journeyConfig = {
   timelineAlt: strings.journey.timelineAlt,
   timelineWidth: 2141,
   timelineHeight: 734,
+  productImage: journeyProduct,
+  productWidth: 1536,
+  productHeight: 1024,
+  glowImage: journeyGlow,
+  glowWidth: 151,
+  glowHeight: 156,
   steps: [
     {
       id: 'symptoms-start',

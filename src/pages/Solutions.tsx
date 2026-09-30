@@ -8,7 +8,6 @@ import Manifesto from '@components/Manifesto'
 import NightCongestion from '@components/NightCongestion'
 import ReliefIntro from '@components/ReliefIntro'
 import ReliefScience from '@components/ReliefScience'
-import TrustedEverywhere from '@components/TrustedEverywhere'
 
 export default function Solutions() {
   return (
@@ -23,7 +22,6 @@ export default function Solutions() {
       <KidsCare />
       <ReliefScience />
       <KnowledgeHub />
-      <TrustedEverywhere />
     </>
   )
 }

@@ -3,10 +3,19 @@ import { Link } from 'react-router-dom'
 import Button from '@components/Button'
 import Container from '@components/Container'
 import InputBar from '@components/InputBar'
+import FacebookIcon from '@icons/FacebookIcon'
+import InstagramIcon from '@icons/InstagramIcon'
+import LinkedInIcon from '@icons/LinkedInIcon'
 import MapPinIcon from '@icons/MapPinIcon'
 import { footerConfig } from '@configs/footer'
 import { namColdLightLogo } from '@resources/brand'
 import { strings } from '@strings/strings'
+
+const socialIcons = {
+  instagram: InstagramIcon,
+  facebook: FacebookIcon,
+  linkedin: LinkedInIcon,
+} as const
 
 export type FooterProps = {
   onSearchPharmacy?: (query: string) => void
@@ -79,6 +88,27 @@ export default function Footer({
               />
             </Link>
             <p className="text-label text-footer-muted">{footerConfig.blurb}</p>
+            <ul
+              className="flex items-center gap-3"
+              aria-label={footerConfig.socialLabel}
+            >
+              {footerConfig.social.map((item) => {
+                const Icon = socialIcons[item.id]
+                return (
+                  <li key={item.id}>
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={item.label}
+                      className="flex size-9 items-center justify-center rounded-full text-white transition-opacity hover:opacity-80"
+                    >
+                      <Icon />
+                    </a>
+                  </li>
+                )
+              })}
+            </ul>
           </div>
 
           <div className="grid w-full flex-1 grid-cols-2 gap-8 sm:grid-cols-4 lg:max-w-[760px] lg:gap-6">

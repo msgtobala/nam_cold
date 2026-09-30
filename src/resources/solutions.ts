@@ -1,13 +1,9 @@
-import nasalRelief from '@assets/images/solutions/nasal-relief.png'
-import coldRelief from '@assets/images/solutions/cold-relief.png'
-import kidsCare from '@assets/images/solutions/kids-care.png'
-import allergyRelief from '@assets/images/solutions/allergy-relief.png'
-import dailyCare from '@assets/images/solutions/daily-care.png'
+import oxy from '@assets/images/solutions/oxy-product-2x.png'
+import ns from '@assets/images/solutions/ns-product-2x.png'
+import vepocaps from '@assets/images/solutions/vepocaps-2x.png'
 
 export const solutionImages = {
-  nasalRelief,
-  coldRelief,
-  kidsCare,
-  allergyRelief,
-  dailyCare,
+  oxy,
+  ns,
+  vepocaps,
 } as const

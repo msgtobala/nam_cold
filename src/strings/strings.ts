@@ -1,3 +1,5 @@
+import { privacyPolicy, terms } from './legal'
+
 export const strings = {
   brand: {
     name: 'NAM COLD',
@@ -7,6 +9,8 @@ export const strings = {
   common: {
     searchAriaLabel: 'Search',
     mainNavAriaLabel: 'Main',
+    menuOpenAriaLabel: 'Open menu',
+    menuCloseAriaLabel: 'Close menu',
   },
 
   header: {
@@ -14,7 +18,8 @@ export const strings = {
     nav: {
       solutions: 'Solutions',
       products: 'Products',
-      about: 'About Us',
+      aboutUs: 'About Us',
+      about: 'Insight',
       contact: 'Contact',
     },
   },
@@ -32,11 +37,9 @@ export const strings = {
   productsHero: {
     ariaLabel: 'NAM COLD OXY product hero',
     badge: 'New formula · Faster relief',
-    headingLine1: 'Khul ke',
-    headingLine2: 'saas lo.',
-    description:
-      'A metered nasal spray engineered for rapid, precise relief. Reaches where congestion begins - in as little as 25 seconds.',
-    productAlt: 'NAM COLD OXY nasal spray — Advanced Oxygen Formula',
+    heading:
+      'Everyday care, Trusted relief Instead of new formulation, faster relief',
+    bannerAlt: 'NAM COLD OXY nasal spray and carton on a bright terrace',
     stats: {
       onset: {
         value: '25s',
@@ -45,10 +48,6 @@ export const strings = {
       duration: {
         value: '12h',
         label: 'Duration',
-      },
-      dose: {
-        value: '0.1ml',
-        label: 'Metered dose',
       },
     },
   },
@@ -66,7 +65,7 @@ export const strings = {
 
   productScience: {
     eyebrow: 'The science',
-    heading: 'From blocked to beautifully open.',
+    heading: 'From blocked to Clearer Breathing..',
     description:
       'Oxymetazoline acts directly on nasal blood vessels, reducing swelling and restoring airflow within seconds.',
     diagramAlt:
@@ -82,7 +81,7 @@ export const strings = {
         number: '02',
         title: 'Spray reaches the source',
         description:
-          'A 0.1ml metered mist deposits precisely where it needs to work - not wasted on the throat.',
+          'The formulation is delivered directly to the nasal passages for targeted action.',
       },
       vesselsConstrict: {
         number: '03',
@@ -94,17 +93,14 @@ export const strings = {
         number: '04',
         title: '12 hours of clear breathing',
         description:
-          'Long-acting relief carries you through the day - or the night - without repeat dosing.',
+          'Long-acting relief carries you through the day - or the night.',
       },
     },
   },
 
   statHero: {
-    ariaLabel: 'Relief onset highlight',
-    eyebrow: 'Relief in seconds',
-    value: '25 Sec',
-    watermark: '25',
-    description: 'Clinically demonstrated onset of action*',
+    ariaLabel: 'Fast action — breathing comfort in 25 seconds',
+    alt: 'FAST ACTION Breathing Comfort — NAM COLD OXY for faster blocked-nose relief in 25 seconds',
   },
 
   lifestyle: {
@@ -203,11 +199,21 @@ export const strings = {
         answer:
           'Store at room temperature, away from direct heat and sunlight, and keep the bottle tightly closed.',
       },
+      otherMedicines: {
+        question: 'Can I use it with other cold medicines?',
+        answer:
+          'You can often use it alongside other cold care products, but avoid combining it with other nasal decongestant sprays that contain oxymetazoline. Check the pack and ask a pharmacist or doctor if you are unsure.',
+      },
+      storeGeneral: {
+        question: 'How should I store it?',
+        answer:
+          'Keep it tightly closed, out of reach of children, and do not freeze. Check the expiry date before use and discard the bottle once it is empty or past its best-before date.',
+      },
     },
   },
 
   symptoms: {
-    badge: 'Interactive Diagnostics',
+    badge: 'Symptom Guide',
     heading: 'How are you feeling today?',
     description:
       'Select your symptoms below to discover the target clinical NAM COLD solution tailored for your recovery.',
@@ -243,7 +249,7 @@ export const strings = {
   manifesto: {
     heading: 'Every symptom has a solution. Start with how you feel.',
     description:
-      "From your first sniffle to clearing the last of a stuffy night - NAM COLD's symptom-matched formulations deliver targeted relief across your whole cold and allergy experience.",
+      "From nasal congestion to everyday nasal care, NAM COLD offers targeted solutions for your respiratory needs.",
   },
 
   reliefIntro: {
@@ -312,10 +318,10 @@ export const strings = {
   },
 
   allergyRelief: {
-    label: '04 - Allergy Relief',
+    label: '04 - NASAL CONGESTION RELIEF ',
     heading: 'Fresh Air, Without The Fuss.',
     description:
-      'Seasonal triggers should not decide your day. Calm sneezing, watery eyes and a blocked nose with focused, fast-acting allergy support.',
+      'Nasal congestion can make breathing difficult. NAM COLD OXY helps reduce swelling due to allergy, inside the nasal passages for easier breathing.',
     visualAlt:
       'Woman surrounded by flowers with NAM COLD allergy relief products',
     tags: [
@@ -332,15 +338,15 @@ export const strings = {
     label: '05 - Kids Care',
     heading: 'Gentle Care For Little Noses.',
     description:
-      'Thoughtfully designed formats for children - with clear dosing guidance for parents and comfort at the heart of every formulation.',
+      'A gentle saline solution designed to help cleanse and moisturise the nasal passages, supporting comfortable everyday nasal care.',
     stats: {
-      fromBirth: {
-        value: '0+',
-        label: 'Suitable from birth (selected formulas)',
+      newbornCare: {
+        title: 'Newborn Care',
+        description: 'Suitable from birth (selected formulas)',
       },
       gentle: {
-        value: 'Gentle',
-        label: 'Paediatrician-informed formulations',
+        title: 'Gentle',
+        description: 'Paediatrician-informed formulations',
       },
     },
     productsAlt: 'NAM COLD kids care product bottles',
@@ -352,14 +358,14 @@ export const strings = {
     eyebrow: 'The NAM COLD Approach',
     heading: 'Science That Delivers Real Relief.',
     description:
-      "Every formulation is built on clinical evidence and tested to work with your body's natural recovery process.",
+      "Every formulations designed to address everyday nasal and respiratory needs with a focus on quality, safety and effective care.",
     learnMore: 'Learn more',
     steps: {
       symptomIdentification: {
         number: '01',
         title: 'Symptom Identification',
         description:
-          'Start with how you feel. Our solutions map directly to your specific symptom - so nothing goes to waste and everything is targeted.',
+          'Start with how you feel. Our solutions map directly to your specific symptom.',
       },
       targetedFormulation: {
         number: '02',
@@ -440,35 +446,21 @@ export const strings = {
       'Explore our targeted pharmaceutical solutions built for every stage of respiratory distress.',
     cta: 'View All Products',
     items: {
-      nasalRelief: {
-        title: 'Nasal Relief',
-        subtitle: 'Fast relief for blocked nose',
-        description:
-          'Aerosolized micro-mists that target inflamed nasal membranes instantly.',
+      oxy: {
+        question: 'Blocked Nose?',
+        title: 'NAMCOLD OXY',
+        description: 'Helps open a blocked nose and makes breathing easier.',
       },
-      coldRelief: {
-        title: 'Cold Relief',
-        subtitle: 'Effective relief from cold & flu',
+      ns: {
+        question: 'Itchy & Dry Nose?',
+        title: 'NAMCOLD NS',
         description:
-          'Complete relief from running nose, scratchy throat, and minor body pain.',
+          'Gentle saline care that helps soothe and moisturize the nose.',
       },
-      kidsCare: {
-        title: 'Kids Care',
-        subtitle: 'Gentle and safe care for kids',
-        description:
-          'Child-friendly dosage formulas curated carefully to soothe little lungs safely.',
-      },
-      allergyRelief: {
-        title: 'Allergy Relief',
-        subtitle: 'Freedom from allergic symptoms',
-        description:
-          'Non-drowsy blockades against pollen, pet dander, and environmental dust.',
-      },
-      dailyCare: {
-        title: 'Daily Care',
-        subtitle: 'Daily protection for better breathing',
-        description:
-          'Isotonic saline washes designed to cleanse and humidify nasal passages daily.',
+      vepocaps: {
+        question: 'Need Steam Relief?',
+        title: 'NAMCOLD VEPOCAPS',
+        description: 'Add to hot water as directed and enjoy soothing vapour.',
       },
     },
   },
@@ -501,6 +493,32 @@ export const strings = {
     },
   },
 
+  whyChoose: {
+    ariaLabel: 'Why Nam Cold',
+    eyebrow: 'Why Nam Cold',
+    heading: 'Science-Led Relief. Human-Centred Care.',
+    description:
+      'One trusted name across the moments when breathing, resting and getting on with life feel harder.',
+    cards: {
+      fastRelief: {
+        title: 'Fast Relief',
+        description: 'Quick support when symptoms slow you down.',
+      },
+      trustedFormulations: {
+        title: 'Trusted Formulations',
+        description: 'Thoughtfully made for real, everyday needs.',
+      },
+      familyCare: {
+        title: 'Family Care',
+        description: 'Solutions for grown-ups and little ones.',
+      },
+      everydayComfort: {
+        title: 'Everyday Comfort',
+        description: 'Simple formats that fit into life.',
+      },
+    },
+  },
+
   aboutHeader: {
     ariaLabel: 'About Nam Cold',
     eyebrow: 'Knowledge & guidance',
@@ -509,6 +527,272 @@ export const strings = {
       'Practical, clinically informed guidance for cold, congestion and allergy—made easier to understand and act on.',
     heroAlt:
       'Mother and child sitting together by a sunny window with plants — breathe easy, the power of fresh air',
+  },
+
+  aboutUsHero: {
+    ariaLabel: 'About NAM COLD',
+    eyebrow: 'About NAM COLD',
+    heading: 'A trusted approach to everyday respiratory relief.',
+    description:
+      'For decades, NAM COLD has helped families breathe easier - trusted formulations designed for cold, congestion, allergies, and everyday respiratory wellness.',
+    primaryCta: 'Explore Products',
+    secondaryCta: 'Our Story',
+    heroAlt:
+      'Woman standing outdoors with arms open, breathing freely against a city skyline',
+  },
+
+  aboutUsIntro: {
+    label: 'Simple care for easier breathing.',
+    heading:
+      'NAM COLD is one of the flagship respiratory-care brands from Lincoln Pharmaceuticals - a healthcare company founded in 1979 with a mission to make quality care accessible to everyone.',
+    description:
+      'Over the years, NAM COLD has grown into a trusted range of respiratory-care solutions for different ages and everyday nasal and cold-related needs.',
+  },
+
+  aboutUsOrigin: {
+    eyebrow: 'Our Origin',
+    heading: 'Founded on a mission. Refined by decades.',
+    paragraphs: {
+      lincoln:
+        'Lincoln Pharmaceuticals was established in Ahmedabad in 1979. From a single manufacturing facility to a publicly listed company with global operations, the journey has always been guided by one principle: healthcare should be accessible to all.',
+      namCold:
+        'NAM COLD grew from this philosophy - a brand built on pharmaceutical rigour, trusted by generations of Indian families.',
+    },
+    year: '1979',
+    founded: 'Founded in Ahmedabad, India',
+    imageAlt:
+      'NAM COLD and traditional wellness products arranged on a white circular platform',
+  },
+
+  aboutUsScience: {
+    index: '02',
+    label: 'Science',
+    heading: 'Research designed around real respiratory needs.',
+    description:
+      'Lincoln Pharmaceuticals operates dedicated R&D programs with a portfolio spanning hundreds of formulations and multiple therapeutic areas. Our formulations are built on clinical insight, not compromise.',
+    imageAlt:
+      'Scientists in a laboratory gathered around a holographic molecular display',
+    stats: {
+      formulations: {
+        label: 'Formulations',
+        value: '300+',
+        description: 'Pharmaceutical formulations across therapeutic areas.',
+      },
+      since: {
+        label: 'Since',
+        value: '1979',
+        description: 'Decades of pharmaceutical expertise and innovation.',
+      },
+      reach: {
+        label: 'Reach',
+        value: '60+',
+        description: 'Countries through Lincoln Pharma global operations.',
+      },
+    },
+  },
+
+  aboutUsPortfolio: {
+    index: '03',
+    label: 'Portfolio',
+    heading: 'One brand. Multiple solutions.',
+    description:
+      'A connected family of targeted formulations for every age, season and everyday breathing need.',
+    imageAlt:
+      'NAM COLD drops, sprays and bottles floating against clouds and a blue wave',
+    items: {
+      nasalRelief: {
+        number: '01',
+        title: 'Nasal Relief',
+        description: 'Drops, sprays and rinses for nasal congestion.',
+      },
+      coldRelief: {
+        number: '02',
+        title: 'Cold Relief',
+        description: 'Targeted relief from nasal congestion and cold symptoms.',
+      },
+      allergyRelief: {
+        number: '03',
+        title: 'Allergy Relief',
+        description: 'Relief from nasal symptoms associated with allergies.',
+      },
+      kidsCare: {
+        number: '04',
+        title: 'Kids Care',
+        description: "Age-appropriate dosing for children's health.",
+      },
+      dailyCare: {
+        number: '05',
+        title: 'Daily Care',
+        description: 'Maintenance for ongoing respiratory wellness.',
+      },
+    },
+  },
+
+  aboutUsManufacturing: {
+    heading: 'Manufacturing excellence. Consistency you can count on.',
+    description:
+      'Products are manufactured within facilities operating under recognized quality systems and pharmaceutical standards - supporting reliability and consistency across every product in the portfolio.',
+    imageAlt:
+      'Lincoln Pharmaceuticals manufacturing campus with white buildings around a landscaped courtyard',
+    items: {
+      gmp: {
+        title: 'GMP Certified',
+        description:
+          'State-of-the-art facilities operating under WHO-GMP guidelines.',
+      },
+      quality: {
+        title: 'Quality Tested',
+        description:
+          'Every batch undergoes rigorous quality testing before reaching pharmacy shelves.',
+      },
+      fieldForce: {
+        title: '600+ Field Force',
+        description:
+          'A network of dedicated professionals supporting healthcare access across India.',
+      },
+    },
+  },
+
+  aboutUsImpact: {
+    eyebrow: 'Impact',
+    heading: 'Over one million health transformations (and counting).',
+    wellbeingEyebrow: 'Everyday Wellbeing',
+    familyBadge: 'Family Wellness',
+    familyAlt:
+      'Three generations of a family holding hands and flying a kite in a sunlit park',
+    productsAlt:
+      'NAM COLD OXY tablets, spray, bottle and drops floating on a pale blue wave',
+    rangeEyebrow: 'NAM COLD Range',
+    rangeTitle: 'Namcold Oxy and Advance Namcold NS - Namcold Vepocaps',
+    rangeDescription: 'Complete respiratory care for the whole family.',
+    stats: {
+      fieldForce: {
+        label: 'Field Force',
+        value: '600+',
+        description: 'Professionals supporting access.',
+      },
+      founded: {
+        label: 'Founded',
+        value: '1979',
+        description: 'Serving healthcare ever since.',
+      },
+      countries: {
+        label: 'Countries',
+        value: '60+',
+        description: 'Reached through global operations.',
+      },
+      formulations: {
+        label: 'Formulations',
+        value: '300+',
+        description: 'Across therapeutic areas.',
+      },
+    },
+  },
+
+  aboutUsPromise: {
+    heading: 'The NAM COLD Promise',
+    description:
+      'Four commitments that guide everything we do - from formulation to the pharmacy shelf.',
+    cards: {
+      trusted: {
+        title: 'Trusted',
+        description:
+          'Reliable solutions for everyday nasal and respiratory care.',
+      },
+      accessible: {
+        title: 'Accessible',
+        description:
+          'Practical respiratory-care solutions designed for everyday use.',
+      },
+      innovative: {
+        title: 'Innovative',
+        description:
+          'Purpose-driven formulations developed for specific nasal and respiratory needs.',
+      },
+      familyFocused: {
+        title: 'Family-Focused',
+        description:
+          'Solutions designed around the everyday respiratory-care needs of families.',
+      },
+    },
+  },
+
+  featuredInsights: {
+    ariaLabel: 'Featured insights',
+    eyebrow: 'Featured this week',
+    heading: 'Worth knowing now.',
+    viewAll: 'View all insights',
+    topicsLabel: 'Explore by topic',
+    topics: {
+      coldCare: 'Cold care',
+      allergies: 'Allergies',
+      kidsCare: 'Kids care',
+      everydayWellness: 'Everyday wellness',
+      productScience: 'Product science',
+    },
+    articles: {
+      progressiveStrength: {
+        tag: 'Progressive Strength',
+        title: 'Built for every level.',
+        description:
+          'From light toning to heavy lifting, this complete dumbbell set adapts to your strength journey. With weights ranging from 2.5kg to 25kg, it’s the ultimate all-in-one solution for progressive training at home.',
+        imageAlt:
+          'Athlete reaching for a dumbbell from a home gym weight rack',
+      },
+      functionalStrength: {
+        tag: 'Functional Strength',
+        title: 'Train for real movement.',
+        description:
+          'This kettlebell set helps you build functional power for everyday actions, from carrying groceries to moving with confidence. With a balanced weight range and comfortable grip, it’s designed to help you move stronger in every direction.',
+        imageAlt: 'Athlete holding a kettlebell in a gym squat',
+      },
+    },
+  },
+
+  insightsLibrary: {
+    ariaLabel: 'Insight library',
+    eyebrow: 'The insight library',
+    heading: 'Answers for everyday health.',
+    searchPlaceholder: 'Search insights',
+    searchAriaLabel: 'Search insights',
+    articles: {
+      coldCare: {
+        tag: 'Cold care',
+        title: 'The first 24 hours: what your body needs most',
+        readTime: '4 min read',
+        imageAlt: 'Man relaxing with a warm drink by the fireplace',
+      },
+      sleep: {
+        tag: 'Sleep',
+        title: 'Why congestion often feels worse at night',
+        readTime: '5 min read',
+        imageAlt: 'Bedroom at night with soft blue accent lighting',
+      },
+      allergies: {
+        tag: 'Allergies',
+        title: 'A room-by-room guide to reducing indoor triggers',
+        readTime: '6 min read',
+        imageAlt: 'Bright living room filled with indoor plants',
+      },
+      kidsCare: {
+        tag: 'Kids care',
+        title: 'Caring for a child with a blocked nose',
+        readTime: '5 min read',
+        imageAlt: 'Parents sitting with a young child on a sofa',
+      },
+      productScience: {
+        tag: 'Product science',
+        title: 'Nasal sprays, drops and rinses-what is the difference?',
+        readTime: '7 min read',
+        imageAlt: 'Nasal spray, drops, rinse, and saline powder products',
+      },
+      everydayWellness: {
+        tag: 'Everyday wellness',
+        title: 'Caring for a child with a blocked nose',
+        readTime: '4 min read',
+        imageAlt: 'Person walking on a sunlit path through a green park',
+      },
+    },
   },
 
   footer: {
@@ -523,6 +807,12 @@ export const strings = {
     disclaimer:
       'Disclaimer: *Oxymetazoline starts relieving congestion in seconds. Consult your doctor if symptoms persist past 7 days. Use only as directed on packaging label.',
     copyright: '© 2026 NAM COLD Pharmaceuticals Ltd.',
+    socialLabel: 'NAM COLD on social media',
+    social: {
+      instagram: 'Instagram',
+      facebook: 'Facebook',
+      linkedin: 'LinkedIn',
+    },
     columns: {
       solutions: 'Solutions',
       products: 'Products',
@@ -530,12 +820,34 @@ export const strings = {
       about: 'About Us',
     },
     links: {
-      nasalRelief: 'Nasal Relief',
-      coldSyrup: 'Cold Syrup',
-      pediatricDrops: 'Pediatric Drops',
-      dailyWash: 'Daily Wash',
+      solutions: {
+        nasalRelief: 'Nasal Relief',
+        coldRelief: 'Cold Relief',
+        congestionRelief: 'Congestion Relief',
+        respiratoryCare: 'Respiratory Care',
+      },
+      products: {
+        oxy: 'Namcold Oxy',
+        oxyAdvance: 'Namcold Oxy Advance',
+        ns: 'Namcold NS',
+        vepocaps: 'Namcold Vepocaps',
+      },
+      learn: {
+        nasalCongestion: 'Nasal Congestion',
+        commonCold: 'Common Cold',
+        respiratoryCare: 'Respiratory Care',
+        productInformation: 'Product Information',
+      },
+      about: {
+        about: 'About NAM COLD',
+        privacy: 'Privacy Policy',
+        terms: 'Terms and Conditions',
+        contact: 'Contact Us',
+      },
     },
   },
+  privacyPolicy,
+  terms,
 } as const
 
 export type Strings = typeof strings

@@ -1,0 +1,10 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { aboutUsOriginConfig } from '@configs/aboutUsOrigin';
+/**
+ * Figma Section 6 / Our Origin (151:788).
+ * Image frame (151:798): 633×400 visible, radius 16.
+ */
+export default function AboutUsOrigin({ className = '' }) {
+    const { eyebrow, heading, paragraphs, year, founded, image } = aboutUsOriginConfig;
+    return (_jsx("section", { id: "our-story", className: ['w-full bg-surface-warm', className].filter(Boolean).join(' '), "aria-labelledby": "about-us-origin-heading", children: _jsxs("div", { className: "mx-auto flex w-full max-w-page flex-col items-start gap-10 px-4 py-14 sm:gap-12 sm:px-8 sm:py-16 lg:flex-row lg:gap-20 lg:px-page-x lg:py-[96px]", children: [_jsxs("div", { className: "flex w-full shrink-0 flex-col items-start gap-5 overflow-hidden lg:w-[631px]", children: [_jsx("span", { className: "text-body-sm font-semibold uppercase tracking-[1.96px] text-primary", children: eyebrow }), _jsx("h2", { id: "about-us-origin-heading", className: "w-full max-w-[354px] text-[1.75rem] font-normal leading-[1.3] text-ink sm:text-lead lg:text-heading", children: heading }), paragraphs.map((paragraph) => (_jsx("p", { className: "w-full text-base font-normal leading-[1.75] text-muted-alt", children: paragraph }, paragraph)))] }), _jsxs("div", { className: "relative h-[240px] w-full min-w-0 overflow-hidden rounded-[16px] sm:h-[320px] lg:h-[400px] lg:flex-1", children: [_jsx("img", { src: image.src, alt: image.alt, width: image.width, height: image.height, className: "absolute inset-0 size-full object-cover object-center", decoding: "async" }), _jsxs("div", { className: "relative z-10 flex h-full flex-col items-start justify-between p-6", children: [_jsx("span", { className: "rounded-sm bg-surface-cream px-4 py-2.5 text-nav font-semibold leading-normal text-[#1a3a0a]", children: founded }), _jsx("p", { className: "text-hero font-extrabold leading-none text-surface-cream opacity-[0.12]", "aria-hidden": "true", children: year })] })] })] }) }));
+}

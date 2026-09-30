@@ -6,29 +6,27 @@ export type HeroBannerProps = {
   alt?: string
 }
 
-/** Figma hero: 1440×785, full-bleed under the header */
+/** Full-width hero. Image is 7544×3000; height follows that ratio so the artwork is not cropped. */
 export default function HeroBanner({
   className = '',
   alt = strings.hero.alt,
 }: HeroBannerProps) {
   return (
     <section
-      className={['relative w-full overflow-hidden bg-[#7ec8e8]', className]
+      className={['relative w-full overflow-hidden bg-[#0b4db3]', className]
         .filter(Boolean)
         .join(' ')}
       aria-label={strings.hero.ariaLabel}
     >
-      <div className="relative w-full aspect-[1440/785]">
-        <img
-          src={heroBanner}
-          alt={alt}
-          width={1440}
-          height={785}
-          className="absolute inset-0 size-full object-cover object-center"
-          decoding="async"
-          fetchPriority="high"
-        />
-      </div>
+      <img
+        src={heroBanner}
+        alt={alt}
+        width={7544}
+        height={3000}
+        className="block h-auto w-full"
+        decoding="async"
+        fetchPriority="high"
+      />
     </section>
   )
 }

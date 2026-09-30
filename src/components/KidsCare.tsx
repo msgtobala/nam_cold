@@ -6,7 +6,7 @@ export type KidsCareProps = {
   className?: string
 }
 
-/** Figma Kids care (1:1120) */
+/** Figma Kids care (171:1117) */
 export default function KidsCare({ className = '' }: KidsCareProps) {
   const navigate = useNavigate()
   const { label, heading, description, cta, ctaHref, stats, products, family } =
@@ -36,27 +36,32 @@ export default function KidsCare({ className = '' }: KidsCareProps) {
             {heading}
           </h2>
 
-          <p className="text-body-sm font-normal leading-[1.65] text-[#6b4a38] sm:text-base">
+          <p className="max-w-[491px] text-body-sm font-normal leading-[1.65] text-[#6b4a38] sm:text-base">
             {description}
           </p>
 
-          <div className="flex w-full flex-col gap-4 sm:flex-row sm:gap-4">
+          <div className="flex w-full flex-col gap-4 sm:flex-row">
             {stats.map((stat) => (
               <div
                 key={stat.id}
-                className="flex flex-1 flex-col gap-2 rounded-[14px] border border-[#ffd8c8] bg-white p-4"
+                className="flex min-h-[140px] flex-1 flex-col gap-2 rounded-[14px] border border-[#ffd8c8] bg-white px-4 pt-[29px] pb-4"
               >
-                <span className="text-[2rem] font-medium leading-none text-accent-rose sm:text-heading">
-                  {stat.value}
+                <span className="text-2xl font-medium leading-normal whitespace-nowrap text-accent-rose">
+                  {stat.title}
                 </span>
-                <span className="max-w-[190px] text-body-sm font-normal leading-[1.4] text-[#6b4a38]">
-                  {stat.label}
+                <span
+                  className={[
+                    'text-body-sm font-normal leading-[1.4] text-[#6b4a38]',
+                    stat.id === 'newborn-care' ? 'max-w-[190px]' : 'max-w-[171px]',
+                  ].join(' ')}
+                >
+                  {stat.description}
                 </span>
               </div>
             ))}
           </div>
 
-          <div className="relative h-[120px] w-full overflow-hidden rounded-md sm:h-[140px]">
+          <div className="relative h-[140px] w-full overflow-hidden rounded-[12px]">
             <img
               src={products.src}
               alt={products.alt}
@@ -70,7 +75,7 @@ export default function KidsCare({ className = '' }: KidsCareProps) {
           <Button
             type="button"
             variant="secondary"
-            className="bg-accent-rose shadow-none hover:bg-accent-rose/90"
+            className="bg-accent-rose! shadow-none! hover:bg-accent-rose/90!"
             onClick={() => navigate(ctaHref)}
           >
             {cta}
