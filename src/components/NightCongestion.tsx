@@ -60,6 +60,7 @@ export default function NightCongestion({
                 width={recommendation.product.width}
                 height={recommendation.product.height}
                 className="absolute inset-0 size-full object-cover"
+                loading="lazy"
                 decoding="async"
               />
             </div>
@@ -97,6 +98,7 @@ export default function NightCongestion({
               width={420}
               height={420}
               className="absolute inset-[-45%] size-[190%] max-w-none"
+              loading="lazy"
               decoding="async"
             />
           </div>
@@ -108,6 +110,7 @@ export default function NightCongestion({
               width={sleep.width}
               height={sleep.height}
               className="absolute inset-0 size-full object-cover"
+              loading="lazy"
               decoding="async"
             />
           </div>

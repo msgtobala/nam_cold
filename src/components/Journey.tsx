@@ -93,6 +93,7 @@ export default function Journey({
                   width={timelineWidth}
                   height={timelineHeight}
                   className="pointer-events-none absolute top-[-42.07%] left-[-0.04%] h-[142.07%] w-[100.07%] max-w-none"
+                  loading="lazy"
                   decoding="async"
                 />
               </div>
@@ -103,6 +104,7 @@ export default function Journey({
                   width={glowWidth}
                   height={glowHeight}
                   className="absolute inset-0 size-full max-w-none"
+                  loading="lazy"
                   decoding="async"
                   aria-hidden="true"
                 />
@@ -114,6 +116,7 @@ export default function Journey({
                   width={productWidth}
                   height={productHeight}
                   className="pointer-events-none absolute top-[-20.03%] left-[-214.97%] h-[132.3%] w-[522.45%] max-w-none"
+                  loading="lazy"
                   decoding="async"
                   aria-hidden="true"
                 />

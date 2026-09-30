@@ -70,6 +70,7 @@ export default function AboutUsImpact({ className = '' }: AboutUsImpactProps) {
                 width={family.width}
                 height={family.height}
                 className="absolute inset-0 size-full object-cover object-center"
+                loading="lazy"
                 decoding="async"
               />
               <div className="relative z-10 flex h-full flex-col items-start justify-end p-5">
@@ -87,6 +88,7 @@ export default function AboutUsImpact({ className = '' }: AboutUsImpactProps) {
                   width={products.width}
                   height={products.height}
                   className="absolute inset-0 size-full object-cover object-center"
+                  loading="lazy"
                   decoding="async"
                 />
               </div>

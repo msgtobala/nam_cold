@@ -11,7 +11,7 @@ export const productsHeroConfig = {
     src: productsHeroImages.banner,
     alt: copy.bannerAlt,
     width: 1774,
-    height: 887,
+    height: 886,
   },
   stats: [
     {

@@ -15,13 +15,14 @@ export default function StatHero({ className = '' }: StatHeroProps) {
         .join(' ')}
       aria-label={ariaLabel}
     >
-      <div className="relative w-full aspect-[1024/395]">
+      <div className="relative w-full aspect-[1920/742]">
         <img
           src={banner.src}
           alt={alt}
           width={banner.width}
           height={banner.height}
           className="absolute inset-0 size-full object-cover object-center"
+          loading="lazy"
           decoding="async"
         />
       </div>

@@ -68,6 +68,7 @@ export default function KidsCare({ className = '' }: KidsCareProps) {
               width={products.width}
               height={products.height}
               className="absolute inset-0 size-full object-cover"
+              loading="lazy"
               decoding="async"
             />
           </div>
@@ -89,6 +90,7 @@ export default function KidsCare({ className = '' }: KidsCareProps) {
             width={family.width}
             height={family.height}
             className="absolute inset-0 size-full object-cover"
+            loading="lazy"
             decoding="async"
           />
         </div>

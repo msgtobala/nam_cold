@@ -51,6 +51,7 @@ export default function AboutUsPortfolio({
             width={image.width}
             height={image.height}
             className="absolute inset-0 size-full object-cover object-center"
+            loading="lazy"
             decoding="async"
           />
         </div>

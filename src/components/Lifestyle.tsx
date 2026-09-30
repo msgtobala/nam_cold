@@ -38,6 +38,7 @@ export default function Lifestyle({ className = '' }: LifestyleProps) {
               width={sleep.image.width}
               height={sleep.image.height}
               className="absolute inset-0 size-full object-cover"
+              loading="lazy"
               decoding="async"
             />
           </div>
@@ -68,6 +69,7 @@ export default function Lifestyle({ className = '' }: LifestyleProps) {
                       width={1248}
                       height={832}
                       className="absolute inset-0 size-full object-cover"
+                      loading="lazy"
                       decoding="async"
                     />
                   </div>

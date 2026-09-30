@@ -26,6 +26,7 @@ export default function BlockedNose({ className = '' }: BlockedNoseProps) {
           width={background.width}
           height={background.height}
           className="h-auto w-full xl:pointer-events-none xl:absolute xl:inset-0 xl:size-full xl:object-cover xl:object-center"
+          loading="lazy"
           decoding="async"
         />
 

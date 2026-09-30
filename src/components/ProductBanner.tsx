@@ -26,6 +26,7 @@ export default function ProductBanner({
         width={width}
         height={height}
         className="block h-auto w-full"
+        loading="lazy"
         decoding="async"
       />
     </section>

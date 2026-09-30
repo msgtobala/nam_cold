@@ -42,6 +42,7 @@ function SolutionCard({ card }: { card: SolutionCardConfig }) {
         width={card.image.width}
         height={card.image.height}
         className={card.image.imageClassName}
+        loading="lazy"
         decoding="async"
       />
     </article>

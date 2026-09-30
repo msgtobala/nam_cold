@@ -60,6 +60,7 @@ export default function InsightsLibrary({
                     width={1248}
                     height={832}
                     className="absolute inset-0 size-full object-cover"
+                    loading="lazy"
                     decoding="async"
                   />
                 </div>

@@ -21,8 +21,8 @@ export default function HeroBanner({
       <img
         src={heroBanner}
         alt={alt}
-        width={7544}
-        height={3000}
+        width={1920}
+        height={764}
         className="block h-auto w-full"
         decoding="async"
         fetchPriority="high"

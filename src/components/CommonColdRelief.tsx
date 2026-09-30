@@ -35,6 +35,7 @@ export default function CommonColdRelief({
             width={photography.width}
             height={photography.height}
             className="absolute inset-0 size-full object-cover"
+            loading="lazy"
             decoding="async"
           />
         </div>
@@ -84,6 +85,7 @@ export default function CommonColdRelief({
               width={products.width}
               height={products.height}
               className="absolute inset-0 size-full object-cover"
+              loading="lazy"
               decoding="async"
             />
           </div>

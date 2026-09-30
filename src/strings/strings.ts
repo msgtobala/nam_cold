@@ -319,7 +319,7 @@ export const strings = {
 
   allergyRelief: {
     label: '04 - NASAL CONGESTION RELIEF ',
-    heading: 'Fresh Air, Without The Fuss.',
+    heading: 'Fresh Air, Without The Blockage.',
     description:
       'Nasal congestion can make breathing difficult. NAM COLD OXY helps reduce swelling due to allergy, inside the nasal passages for easier breathing.',
     visualAlt:

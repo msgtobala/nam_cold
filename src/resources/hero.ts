@@ -1,3 +1,3 @@
-import heroBanner from '@assets/images/hero_banner.png'
+import heroBanner from '@assets/images/hero_banner.jpg'
 
 export { heroBanner }

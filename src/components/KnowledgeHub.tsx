@@ -52,6 +52,7 @@ export default function KnowledgeHub({ className = '' }: KnowledgeHubProps) {
                     width={318}
                     height={191}
                     className="absolute inset-0 size-full object-cover"
+                    loading="lazy"
                     decoding="async"
                   />
                 </div>

@@ -97,6 +97,7 @@ export default function Symptoms({
                       width={100}
                       height={110}
                       className="max-h-full max-w-full object-contain"
+                      loading="lazy"
                       decoding="async"
                     />
                   </span>

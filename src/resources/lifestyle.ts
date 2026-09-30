@@ -1,8 +1,8 @@
-import office from '@assets/images/products/lifestyle/office.png'
-import outdoor from '@assets/images/products/lifestyle/outdoor.png'
-import sleep from '@assets/images/products/lifestyle/sleep.png'
-import sleepHero from '@assets/images/products/lifestyle/sleep-hero.png'
-import travel from '@assets/images/products/lifestyle/travel.png'
+import office from '@assets/images/products/lifestyle/office.jpg'
+import outdoor from '@assets/images/products/lifestyle/outdoor.jpg'
+import sleep from '@assets/images/products/lifestyle/sleep.jpg'
+import sleepHero from '@assets/images/products/lifestyle/sleep-hero.jpg'
+import travel from '@assets/images/products/lifestyle/travel.jpg'
 
 export const lifestyleImages = {
   sleepHero,

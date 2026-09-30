@@ -27,6 +27,7 @@ export default function AllergyRelief({ className = '' }: AllergyReliefProps) {
           className={['pointer-events-none absolute z-0', dot.className].join(
             ' ',
           )}
+          loading="lazy"
           decoding="async"
           aria-hidden="true"
         />
@@ -40,6 +41,7 @@ export default function AllergyRelief({ className = '' }: AllergyReliefProps) {
             width={visual.width}
             height={visual.height}
             className="absolute inset-0 size-full object-cover"
+            loading="lazy"
             decoding="async"
           />
         </div>

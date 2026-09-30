@@ -46,6 +46,7 @@ export default function AboutUsOrigin({ className = '' }: AboutUsOriginProps) {
             width={image.width}
             height={image.height}
             className="absolute inset-0 size-full object-cover object-center"
+            loading="lazy"
             decoding="async"
           />
           <div className="relative z-10 flex h-full flex-col items-start justify-between p-6">

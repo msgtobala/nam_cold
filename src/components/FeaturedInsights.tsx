@@ -68,6 +68,7 @@ export default function FeaturedInsights({
                           ? 'absolute top-[-71.88%] left-[-3.43%] h-[289.48%] w-[117.45%] max-w-none'
                           : 'absolute inset-0 size-full object-cover'
                       }
+                      loading="lazy"
                       decoding="async"
                     />
                   </div>
@@ -92,6 +93,7 @@ export default function FeaturedInsights({
                     width={1248}
                     height={1}
                     className="block h-px w-full max-w-none"
+                    loading="lazy"
                     decoding="async"
                     aria-hidden="true"
                   />

@@ -59,6 +59,7 @@ export default function ProductJourney({ className = '' }: ProductJourneyProps) 
               width={timelineWidth}
               height={timelineHeight}
               className="h-auto w-full object-contain object-center"
+              loading="lazy"
               decoding="async"
             />
           </div>

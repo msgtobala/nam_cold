@@ -8,7 +8,7 @@ export const statHeroConfig = {
   alt: copy.alt,
   banner: {
     src: statHeroImages.banner,
-    width: 1024,
-    height: 395,
+    width: 1920,
+    height: 742,
   },
 } as const
