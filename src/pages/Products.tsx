@@ -1,7 +1,6 @@
 import Faq from '@components/Faq'
 import KnowledgeHub from '@components/KnowledgeHub'
 import Lifestyle from '@components/Lifestyle'
-import ProductJourney from '@components/ProductJourney'
 import ProductScience from '@components/ProductScience'
 import ProductsHero from '@components/ProductsHero'
 import Reviews from '@components/Reviews'
@@ -16,7 +15,6 @@ export default function Products() {
       <ProductScience />
       <StatHero />
       <Lifestyle />
-      <ProductJourney />
       <Reviews />
       <Faq />
       <KnowledgeHub />
