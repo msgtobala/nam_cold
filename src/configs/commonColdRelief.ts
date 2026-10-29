@@ -6,19 +6,6 @@ const copy = strings.commonColdRelief
 export const commonColdReliefConfig = {
   label: copy.label,
   heading: copy.heading,
-  description: copy.description,
-  stats: [
-    {
-      id: 'formulations',
-      value: copy.stats.formulations.value,
-      label: copy.stats.formulations.label,
-    },
-    {
-      id: 'relief',
-      value: copy.stats.relief.value,
-      label: copy.stats.relief.label,
-    },
-  ],
   photography: {
     src: commonColdImages.photography,
     alt: copy.photographyAlt,

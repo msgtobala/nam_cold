@@ -12,16 +12,8 @@ export default function CommonColdRelief({
   className = '',
 }: CommonColdReliefProps) {
   const navigate = useNavigate()
-  const {
-    label,
-    heading,
-    description,
-    stats,
-    photography,
-    products,
-    cta,
-    ctaHref,
-  } = commonColdReliefConfig
+  const { label, heading, photography, products, cta, ctaHref } =
+    commonColdReliefConfig
 
   return (
     <section
@@ -52,33 +44,10 @@ export default function CommonColdRelief({
 
           <h2
             id="common-cold-heading"
-            className="text-[1.75rem] font-normal leading-[1.3] text-ink sm:text-lead lg:text-heading"
+            className="whitespace-pre-line text-[1.75rem] font-normal leading-[1.3] text-ink sm:text-lead lg:text-heading"
           >
             {heading}
           </h2>
-
-          <p className="text-body-sm font-normal leading-[1.4] text-placeholder sm:text-base">
-            {description}
-          </p>
-
-          <div className="flex w-full items-start border-t border-[#e8e8e0]">
-            {stats.map((stat, index) => (
-              <div
-                key={stat.id}
-                className={[
-                  'flex flex-col gap-1 pt-6',
-                  index === 0 ? 'pr-6 sm:pr-8' : 'border-l border-[#e8e8e0] pl-6 sm:pl-8',
-                ].join(' ')}
-              >
-                <span className="text-[2rem] font-semibold leading-none text-primary sm:text-heading">
-                  {stat.value}
-                </span>
-                <span className="text-body-sm font-normal leading-normal text-placeholder">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
 
           <div className="relative h-[140px] w-full overflow-hidden rounded-md sm:h-[160px] lg:h-[180px]">
             <ProgressiveImage

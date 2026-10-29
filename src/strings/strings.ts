@@ -253,20 +253,8 @@ export const strings = {
   },
 
   commonColdRelief: {
-    label: '01 - Common Cold',
-    heading: 'Comfort For Coughs. Relief For Heavy Heads.',
-    description:
-      'Targeted formulations designed to work across your everyday cold symptoms - from the first sniffle to the final sneeze.',
-    stats: {
-      formulations: {
-        value: '6+',
-        label: 'Symptom-specific formulations',
-      },
-      relief: {
-        value: '48h',
-        label: 'Sustained relief support',
-      },
-    },
+    label: '01 - Targeted Relief',
+    heading: 'Blockage Gone.\nBreathe On.',
     photographyAlt: 'Person resting on a sofa while dealing with cold symptoms',
     productsAlt: 'NAM COLD common cold product range',
     cta: 'View common cold range',
