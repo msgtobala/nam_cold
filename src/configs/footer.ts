@@ -47,7 +47,7 @@ export const footerConfig = {
         { label: links.products.oxy, to: '/products' },
         { label: links.products.oxyAdvance, to: '/products' },
         { label: links.products.ns, to: '/products' },
-        { label: links.products.vepocaps, to: '/products' },
+        { label: links.products.vapocaps, to: '/products' },
       ],
     },
     {

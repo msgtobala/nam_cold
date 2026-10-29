@@ -69,7 +69,7 @@ export default function PageMotion({ children }: PageMotionProps) {
           ease: 'power2.out',
           scrollTrigger: {
             trigger: section,
-            start: 'top 85%',
+            start: 'top 70%',
             once: true,
           },
         })

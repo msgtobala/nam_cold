@@ -44,10 +44,5 @@ export const faqConfig = {
       question: copy.items.otherMedicines.question,
       answer: copy.items.otherMedicines.answer,
     },
-    {
-      id: 'store-general',
-      question: copy.items.storeGeneral.question,
-      answer: copy.items.storeGeneral.answer,
-    },
   ] satisfies FaqItemConfig[],
 } as const

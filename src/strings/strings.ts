@@ -204,11 +204,6 @@ export const strings = {
         answer:
           'You can often use it alongside other cold care products, but avoid combining it with other nasal decongestant sprays that contain oxymetazoline. Check the pack and ask a pharmacist or doctor if you are unsure.',
       },
-      storeGeneral: {
-        question: 'How should I store it?',
-        answer:
-          'Keep it tightly closed, out of reach of children, and do not freeze. Check the expiry date before use and discard the bottle once it is empty or past its best-before date.',
-      },
     },
   },
 
@@ -457,9 +452,9 @@ export const strings = {
         description:
           'Gentle saline care that helps soothe and moisturize the nose.',
       },
-      vepocaps: {
+      vapocaps: {
         question: 'Need Steam Relief?',
-        title: 'NAMCOLD VEPOCAPS',
+        title: 'NAMCOLD VAPOCAPS',
         description: 'Add to hot water as directed and enjoy soothing vapour.',
       },
     },
@@ -663,7 +658,7 @@ export const strings = {
     productsAlt:
       'NAM COLD OXY tablets, spray, bottle and drops floating on a pale blue wave',
     rangeEyebrow: 'NAM COLD Range',
-    rangeTitle: 'Namcold Oxy and Advance Namcold NS - Namcold Vepocaps',
+    rangeTitle: 'Namcold Oxy and Advance Namcold NS - Namcold Vapocaps',
     rangeDescription: 'Complete respiratory care for the whole family.',
     stats: {
       fieldForce: {
@@ -830,7 +825,7 @@ export const strings = {
         oxy: 'Namcold Oxy',
         oxyAdvance: 'Namcold Oxy Advance',
         ns: 'Namcold NS',
-        vepocaps: 'Namcold Vepocaps',
+        vapocaps: 'Namcold Vapocaps',
       },
       learn: {
         nasalCongestion: 'Nasal Congestion',

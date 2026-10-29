@@ -74,10 +74,10 @@ export const solutionsGridConfig = {
       },
     },
     {
-      id: 'vepocaps',
-      question: copy.vepocaps.question,
-      title: copy.vepocaps.title,
-      description: copy.vepocaps.description,
+      id: 'vapocaps',
+      question: copy.vapocaps.question,
+      title: copy.vapocaps.title,
+      description: copy.vapocaps.description,
       backgroundClassName: 'bg-[#feebf1]',
       titleClassName: 'text-accent-pink',
       // Figma 185:3021 — card 418×440; text left 36 / top 37; desc width 243 (2 lines)
@@ -86,7 +86,7 @@ export const solutionsGridConfig = {
       descriptionClassName:
         'mt-3 w-[243px] max-w-[243px] text-body-sm font-normal leading-[1.2] text-black/50',
       image: {
-        src: solutionImages.vepocaps,
+        src: solutionImages.vapocaps,
         width: 664,
         height: 504,
         // Figma 170:607: left 46, top 172, 332×252, radius 14 on 418×440
